@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 import {
   ArrowRight,
   Mail,
@@ -45,7 +45,7 @@ const EMAIL_TO = "dyutichakravarthy@gmail.com";
 const fade = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.45, ease: "easeOut" },
+  transition:{ duration: 0.6, ease: cubicBezier(0.22, 1, 0.36, 1) },
 };
 
 type RouteSetter = (r: string) => void;
