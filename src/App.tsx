@@ -196,9 +196,7 @@ function Section({
         {eyebrow ? (
           <div className="flex items-center gap-2">
             <Sparkles className="h-4 w-4" style={{ color: THEME.accent2 }} />
-            <p className="text-xs font-semibold uppercase tracking-wider" style={{ color: THEME.muted }}>
-              {eyebrow}
-            </p>
+
           </div>
         ) : null}
         <h2 className="text-2xl sm:text-3xl font-semibold" style={{ color: THEME.text }}>
@@ -795,9 +793,6 @@ function CaseStudyLayout({
                   className="rounded-3xl p-5"
                   style={{ background: "rgba(255,255,255,0.35)", border: `1px solid ${THEME.line}`, backdropFilter: "blur(10px)" }}
                 >
-                  <div className="text-xs font-semibold uppercase tracking-wider" style={{ color: THEME.muted }}>
-                    At a glance
-                  </div>
                   <div className="mt-4 grid gap-3 text-sm" style={{ color: THEME.text }}>
                     <div className="flex items-center justify-between">
                       <span style={{ color: THEME.muted }}>Role</span>
@@ -817,10 +812,7 @@ function CaseStudyLayout({
                     </div>
                   </div>
 
-                  <div className="mt-6">
-                    <div className="text-xs font-semibold uppercase tracking-wider" style={{ color: THEME.muted }}>
-                      Jump to
-                    </div>
+
                     <div className="mt-3 flex flex-col gap-2">
                       {sections.map((s) => (
                         <button
