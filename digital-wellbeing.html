@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Wellbeing Â· Dyuti Chakravarthy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #F2E9E4;
+      --surface: #EBE0DA;
+      --text:    #22223B;
+      --muted:   #9A8C98;
+      --light:   #C9ADA7;
+      --accent:  #4A4E69;
+      --mauve:   #9A8C98;
+      --taupe:   #C9ADA7;
+      --cream:   #F2E9E4;
+      --navy:    #22223B;
+      --slate:   #4A4E69;
+      --border:  #D9CECA;
+      --font:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-w:   1100px;
+      --nav-h:   68px;
+      --ease:    cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ââ Nav ââ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h);
+      background: rgba(242,233,228,0.9);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; padding: 0 2rem;
+    }
+    .nav-inner { max-width: var(--max-w); width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); transition: color 0.18s var(--ease); }
+    .nav-back:hover { color: var(--navy); }
+    .nav-back svg { width: 16px; height: 16px; }
+    .nav-tag { font-size: 0.75rem; font-weight: 600; color: var(--accent); background: rgba(74,78,105,0.08); padding: 0.25rem 0.7rem; border-radius: 999px; letter-spacing: 0.04em; }
+
+    /* ââ Wrapper ââ */
+    .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+
+    /* ââ Section labels ââ */
+    .s-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .s-label-light { color: var(--taupe); }
+
+    /* ââ Hero ââ */
+    #hero {
+      padding-top: calc(var(--nav-h) + 5rem); padding-bottom: 6rem;
+      background: var(--cream); position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: ''; position: absolute; width: 680px; height: 680px; top: -200px; left: -150px;
+      background: radial-gradient(circle, rgba(74,78,105,0.2) 0%, transparent 70%);
+      border-radius: 50%; filter: blur(80px);
+      animation: orb1 14s ease-in-out infinite alternate; pointer-events: none;
+    }
+    #hero::after {
+      content: ''; position: absolute; width: 520px; height: 520px; bottom: -100px; right: -60px;
+      background: radial-gradient(circle, rgba(154,140,152,0.18) 0%, rgba(201,173,167,0.15) 40%, transparent 70%);
+      border-radius: 50%; filter: blur(80px);
+      animation: orb2 18s ease-in-out infinite alternate; pointer-events: none;
+    }
+    @keyframes orb1 { 0%{transform:translate(0,0) scale(1)} 50%{transform:translate(80px,50px) scale(1.1)} 100%{transform:translate(30px,100px) scale(0.95)} }
+    @keyframes orb2 { 0%{transform:translate(0,0) scale(1)} 50%{transform:translate(-60px,-40px) scale(1.15)} 100%{transform:translate(-30px,-80px) scale(1.05)} }
+    #hero .wrap { position: relative; z-index: 1; }
+
+    .hero-breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .hero-breadcrumb span { color: var(--accent); font-weight: 600; }
+    .hero-h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--navy); margin-bottom: 1.25rem; max-width: 780px; }
+    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 580px; line-height: 1.7; margin-bottom: 2.5rem; }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag { font-size: 0.75rem; font-weight: 500; color: var(--slate); background: rgba(74,78,105,0.1); padding: 0.3rem 0.75rem; border-radius: 999px; }
+
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 680px; }
+    .stat-box { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; line-height: 1; }
+    .stat-label { font-size: 0.75rem; color: var(--muted); margin-top: 0.3rem; line-height: 1.4; }
+
+    /* ââ Shared section padding ââ */
+    .section-pad { padding: 6rem 0; }
+    .section-pad-sm { padding: 4.5rem 0; }
+
+    /* ââ Section headings ââ */
+    .s-h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+    .s-h2-light { color: var(--cream); }
+    .s-body { font-size: 1rem; color: var(--muted); line-height: 1.75; }
+    .s-body-light { color: rgba(242,233,228,0.7); }
+
+    /* ââ Divider ââ */
+    .divider { height: 1px; background: var(--border); opacity: 0.5; max-width: var(--max-w); margin: 0 auto; }
+
+    /* ââ 01 Problem section ââ */
+    #problem { background: var(--cream); }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 3.5rem; }
+    .problem-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 2rem; }
+    .problem-card-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .problem-card p { font-size: 0.95rem; color: var(--text); line-height: 1.7; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .why-item { background: var(--surface); border-radius: 10px; padding: 1.25rem 1.5rem; }
+    .why-item p { font-size: 0.875rem; color: var(--text); line-height: 1.6; }
+
+    /* ââ 02 Landscape section ââ */
+    #landscape { background: var(--slate); }
+    .landscape-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3.5rem; }
+    .landscape-col { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 2rem; }
+    .landscape-col-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); margin-bottom: 1.25rem; }
+    .landscape-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .landscape-col li { font-size: 0.9rem; color: rgba(242,233,228,0.85); padding-left: 1.2rem; position: relative; line-height: 1.5; }
+    .landscape-col li::before { content: 'â'; position: absolute; left: 0; color: var(--taupe); font-weight: 600; }
+
+    /* Journey flow */
+    .journey-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 2rem; }
+    .journey-step { background: rgba(34,34,59,0.6); border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; position: relative; }
+    .journey-step:not(:last-child)::after {
+      content: 'â'; position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+      color: var(--taupe); font-size: 1.2rem; z-index: 1;
+    }
+    .journey-step-title { font-size: 0.78rem; font-weight: 700; color: var(--cream); margin-bottom: 0.75rem; line-height: 1.3; }
+    .journey-step-sees { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.4rem; }
+    .journey-step ul { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+    .journey-step li { font-size: 0.75rem; color: rgba(242,233,228,0.7); line-height: 1.4; }
+    .interp-callout { background: rgba(74,78,105,0.4); border-left: 3px solid var(--taupe); border-radius: 8px; padding: 1.5rem 2rem; }
+    .interp-callout p { font-size: 0.9rem; color: rgba(242,233,228,0.9); line-height: 1.7; }
+    .interp-callout p + p { margin-top: 0.6rem; }
+
+    /* ââ 03 Research section ââ */
+    #research { background: var(--cream); }
+    .research-method { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(74,78,105,0.08); border: 1px solid rgba(74,78,105,0.15); color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 2.5rem; }
+    .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+    .research-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 2rem; }
+    .research-card-title { font-size: 0.8rem; font-weight: 700; color: var(--slate); margin-bottom: 1rem; letter-spacing: 0.02em; }
+    .research-stat { font-size: 2.2rem; font-weight: 700; color: var(--navy); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.25rem; }
+    .research-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
+    .research-card li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.5; }
+    .research-card li::before { content: 'Â·'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .insight-bar { background: var(--navy); border-radius: 10px; padding: 1.25rem 2rem; text-align: center; }
+    .insight-bar p { font-size: 0.9rem; color: var(--cream); font-weight: 500; line-height: 1.6; }
+    .insight-bar strong { color: var(--taupe); }
+
+    /* ââ 04 Problem Breakdown ââ */
+    #breakdown { background: var(--navy); }
+    .core-insight { background: rgba(201,173,167,0.12); border: 1px solid rgba(201,173,167,0.25); border-radius: 14px; padding: 2rem 2.5rem; margin-bottom: 3rem; text-align: center; }
+    .core-insight p { font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.7; }
+    .core-insight p strong { color: var(--taupe); font-style: normal; }
+    .breakdown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .breakdown-card { background: rgba(74,78,105,0.3); border: 1px solid rgba(154,140,152,0.2); border-radius: 14px; padding: 1.75rem; }
+    .breakdown-card-title { font-size: 1rem; font-weight: 700; color: var(--cream); margin-bottom: 0.75rem; }
+    .breakdown-card p { font-size: 0.875rem; color: rgba(242,233,228,0.7); line-height: 1.65; }
+
+    /* ââ 05 Target Segment ââ */
+    #segment { background: var(--cream); }
+    .segment-intro { max-width: 680px; margin-bottom: 3rem; }
+    .segment-intro p { font-size: 1rem; color: var(--muted); line-height: 1.75; }
+    .segment-callout { background: var(--slate); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+    .segment-callout p { font-size: 0.9rem; color: var(--cream); line-height: 1.65; font-weight: 500; }
+    .jtbd-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .jtbd-col { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; }
+    .jtbd-col-title { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
+    .jtbd-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .jtbd-col li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.5; }
+    .jtbd-col li::before { content: 'â'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 0.1em; }
+
+    /* ââ 06 Solutions ââ */
+    #solutions { background: var(--slate); }
+    .solutions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+    .solution-card { background: rgba(242,233,228,0.08); border: 1px solid rgba(242,233,228,0.15); border-radius: 14px; padding: 1.75rem; position: relative; }
+    .solution-card.winner { background: var(--cream); border-color: transparent; }
+    .solution-card.winner .solution-title { color: var(--navy); }
+    .solution-card.winner .solution-what-label { color: var(--slate); }
+    .solution-card.winner p { color: var(--muted); }
+    .solution-badge { position: absolute; top: -10px; right: 16px; background: var(--navy); color: var(--cream); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; padding: 0.25rem 0.65rem; border-radius: 999px; }
+    .solution-title { font-size: 1rem; font-weight: 700; color: var(--cream); margin-bottom: 0.5rem; letter-spacing: 0.01em; }
+    .solution-what-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.4rem; margin-top: 1rem; }
+    .solution-card p { font-size: 0.82rem; color: rgba(242,233,228,0.75); line-height: 1.6; }
+
+    /* Priority table */
+    .priority-table-wrap { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { background: rgba(34,34,59,0.6); color: var(--taupe); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 1rem 1.25rem; text-align: center; }
+    thead th:first-child { text-align: left; }
+    tbody tr { border-top: 1px solid rgba(255,255,255,0.07); }
+    tbody tr.winner-row { background: rgba(242,233,228,0.08); }
+    tbody td { padding: 1rem 1.25rem; font-size: 0.875rem; color: rgba(242,233,228,0.8); text-align: center; }
+    tbody td:first-child { text-align: left; color: var(--cream); font-weight: 500; }
+    .score-bold { font-weight: 700; color: var(--cream); font-size: 1rem; }
+
+    /* ââ 07 How It Works ââ */
+    #howitworks { background: var(--cream); }
+    .flow-nodes { display: flex; align-items: stretch; gap: 0; margin-bottom: 3rem; overflow-x: auto; }
+    .flow-node { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; flex: 1; min-width: 150px; }
+    .flow-arrow { display: flex; align-items: center; justify-content: center; padding: 0 0.5rem; color: var(--accent); font-size: 1.2rem; flex-shrink: 0; }
+    .flow-node-title { font-size: 0.78rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .flow-node p { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
+
+    .journey-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .ux-principles h3 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
+    .ux-principles ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .ux-principles li { font-size: 0.875rem; color: var(--muted); padding-left: 1.25rem; position: relative; line-height: 1.5; }
+    .ux-principles li::before { content: 'â'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.7rem; }
+    .ux-principles strong { color: var(--navy); font-weight: 600; }
+
+    .user-journey-steps { display: flex; flex-direction: column; gap: 1rem; }
+    .journey-numbered { display: flex; gap: 1rem; align-items: flex-start; }
+    .journey-num { width: 28px; height: 28px; background: var(--slate); color: var(--cream); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+    .journey-numbered p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+    .journey-numbered strong { color: var(--navy); }
+
+    /* ââ 08 Metrics ââ */
+    #metrics { background: var(--navy); }
+    .north-star { background: rgba(201,173,167,0.1); border: 1px solid rgba(201,173,167,0.25); border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; }
+    .north-star-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.75rem; }
+    .north-star h3 { font-size: 1.25rem; font-weight: 700; color: var(--cream); margin-bottom: 1rem; line-height: 1.4; }
+    .north-star p { font-size: 0.9rem; color: rgba(242,233,228,0.7); line-height: 1.7; }
+    .north-star p strong { color: var(--taupe); font-weight: 600; }
+    .metrics-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .metrics-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); margin-bottom: 1rem; }
+    .metrics-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .metrics-col li { font-size: 0.875rem; color: rgba(242,233,228,0.75); padding-left: 1.25rem; position: relative; line-height: 1.6; }
+    .metrics-col li::before { content: 'â'; position: absolute; left: 0; color: var(--taupe); font-weight: 700; font-size: 0.75rem; }
+    .metrics-col li strong { color: var(--cream); font-weight: 600; }
+
+    /* ââ 09 Risks ââ */
+    #risks { background: var(--cream); }
+    .risk-intro { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; margin-bottom: 3rem; }
+    .risk-overview p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 1rem; }
+    .risk-analysis h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .risk-analysis ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .risk-analysis li { font-size: 0.875rem; color: var(--muted); padding-left: 1rem; position: relative; }
+    .risk-analysis li::before { content: 'Â·'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .risk-table-wrap { background: white; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .risk-table-wrap thead th { background: var(--navy); color: var(--taupe); }
+    .risk-table-wrap tbody tr { border-top: 1px solid var(--border); }
+    .risk-table-wrap tbody tr:hover { background: var(--surface); }
+    .risk-table-wrap tbody td { color: var(--text); }
+    .risk-table-wrap tbody td:first-child { color: var(--navy); font-weight: 600; }
+    .badge { display: inline-block; font-size: 0.68rem; font-weight: 600; padding: 0.2rem 0.55rem; border-radius: 999px; }
+    .badge-high { background: rgba(199,95,113,0.12); color: #c75f71; }
+    .badge-med { background: rgba(201,173,167,0.2); color: #8a6e65; }
+    .badge-low { background: rgba(162,174,157,0.2); color: #5a7a55; }
+
+    /* ââ Footer ââ */
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); transition: color 0.18s var(--ease); }
+    .footer-back:hover { color: var(--navy); }
+    .footer-copy { font-size: 0.78rem; color: var(--light); }
+
+    /* ââ Fade in ââ */
+    .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ââ Responsive ââ */
+    @media (max-width: 768px) {
+      .wrap { padding: 0 1.25rem; }
+      .hero-stats, .problem-grid, .landscape-cols, .research-grid, .breakdown-grid,
+      .jtbd-grid, .solutions-grid, .journey-cols, .metrics-cols, .risk-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+      .journey-flow { grid-template-columns: 1fr 1fr; }
+      .journey-step:not(:last-child)::after { display: none; }
+      .section-pad { padding: 4rem 0; }
+      .s-h2 { font-size: 1.8rem; }
+      .hero-h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-back">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Dyuti Chakravarthy
+      </a>
+      <span class="nav-tag">Case Study</span>
+    </div>
+  </nav>
+
+  <!-- ââ Hero ââ -->
+  <section id="hero">
+    <div class="wrap">
+      <div class="hero-breadcrumb">Portfolio <span>/ Digital Wellbeing</span></div>
+      <h1 class="hero-h1 fade-up">Why do we scroll â<br/>and never know why?</h1>
+      <p class="hero-sub fade-up" style="transition-delay:0.08s;">
+        Redesigning iOS Screen Time to move beyond measurement â delivering behavioral context
+        at the exact moment a pattern is occurring.
+      </p>
+      <div class="hero-tags fade-up" style="transition-delay:0.14s;">
+        <span class="tag">Product Strategy</span>
+        <span class="tag">iOS Â· Screen Time</span>
+        <span class="tag">UX Research</span>
+        <span class="tag">Insight Design</span>
+        <span class="tag">Behavioral Science</span>
+      </div>
+      <div class="hero-stats fade-up" style="transition-delay:0.2s;">
+        <div class="stat-box">
+          <div class="stat-num">19.6%</div>
+          <div class="stat-label">CAGR of digital wellbeing market in 2025</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">$15.3B</div>
+          <div class="stat-label">Projected market size by 2033</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">3â5M</div>
+          <div class="stat-label">High-signal target cohort (late-night users)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ââ 01 The Problem ââ -->
+  <section id="problem" class="section-pad">
+    <div class="wrap">
+      <p class="s-label fade-up">01 â The Problem</p>
+      <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">Data without context<br/>creates disengagement</h2>
+      <p class="s-body fade-up" style="transition-delay:0.1s; max-width:620px; margin-bottom:3rem;">
+        With smartphones used 4â5+ hours daily on average, OS-native tools have become widespread â but they surface activity without explaining behavior.
+      </p>
+
+      <div class="problem-grid fade-up" style="transition-delay:0.12s;">
+        <div class="problem-card">
+          <div class="problem-card-label">Problem Statement</div>
+          <p>Digital wellbeing tools provide detailed usage metrics but fail to explain the <strong>behavioral triggers, emotional context, and recurring patterns</strong> behind screen habits â leading to disengagement over time.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card-label">Product Goal</div>
+          <p>Enable users to understand their recurring digital behavior patterns through <strong>reflective, non-judgmental insights</strong> â without restricting or prescribing usage.</p>
+        </div>
+      </div>
+
+      <p class="s-label" style="margin-bottom:1rem;">Why does this problem matter?</p>
+      <div class="why-grid fade-up">
+        <div class="why-item"><p>Users disengage when dashboards don't translate data into meaning.</p></div>
+        <div class="why-item"><p>Without understanding triggers, habits repeat â awareness alone changes nothing.</p></div>
+        <div class="why-item"><p>Evaluative insights trigger guilt instead of clarity, accelerating churn.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ââ 02 Current Landscape ââ -->
+  <section id="landscape" class="section-pad">
+    <div class="wrap">
+      <p class="s-label s-label-light fade-up">02 â Current Landscape</p>
+      <h2 class="s-h2 s-h2-light fade-up" style="transition-delay:0.05s;">iOS Screen Time measures behavior<br/>but never interprets it</h2>
+      <p class="s-body s-body-light fade-up" style="transition-delay:0.1s; max-width:580px; margin-bottom:3rem;">
+        The app surfaces activity but does not synthesize recurring patterns, identify triggers, or provide narrative context.
+      </p>
+
+      <div class="landscape-cols fade-up" style="transition-delay:0.12s;">
+        <div class="landscape-col">
+          <div class="landscape-col-title">What today's OS tools focus on</div>
+          <ul>
+            <li>Daily and weekly screen-time totals</li>
+            <li>Usage breakdown by app</li>
+            <li>Comparative metrics over time</li>
+            <li>Restriction via app limits and focus modes</li>
+            <li>Alerts when usage exceeds set thresholds</li>
+          </ul>
+        </div>
+        <div class="landscape-col">
+          <div class="landscape-col-title">Where today's OS tools fail</div>
+          <ul>
+            <li>Context is missing â usage data shown without triggers or situational signals</li>
+            <li>Dashboards are descriptive but not explanatory, lacking the 'why' of behavior</li>
+            <li>Over-indexed on quantification which increases cognitive load</li>
+            <li>Retrospective reporting when emotional context is already lost</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="s-label s-label-light" style="margin-bottom:1.25rem;">The iOS Screen Time User Journey</p>
+      <div class="journey-flow fade-up">
+        <div class="journey-step">
+          <div class="journey-step-title">User navigates to Screen Time</div>
+          <div class="journey-step-sees">User sees</div>
+          <ul><li>Daily avg screen time</li><li>Weekly usage graph</li></ul>
+          <div class="journey-step-sees" style="margin-top:0.75rem;">User feels</div>
+          <ul><li>Mild awareness</li><li>"How bad was today?"</li></ul>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-title">User views app & website activity</div>
+          <div class="journey-step-sees">User sees</div>
+          <ul><li>Day vs. Week toggle</li><li>Hour-by-hour graph</li><li>Category splits, pickups</li></ul>
+          <div class="journey-step-sees" style="margin-top:0.75rem;">User feels</div>
+          <ul><li>"Yeah, Instagram again."</li></ul>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-title">Decision point</div>
+          <div class="journey-step-sees">User sees</div>
+          <ul><li>App Limits</li><li>Downtime scheduling</li><li>Communications blocking</li></ul>
+          <div class="journey-step-sees" style="margin-top:0.75rem;">User feels</div>
+          <ul><li>"Maybe I should limit this."</li></ul>
+        </div>
+        <div class="journey-step">
+          <div class="journey-step-title">Disengagement</div>
+          <div class="journey-step-sees">User sees</div>
+          <ul><li>Same screen-time loop</li></ul>
+          <div class="journey-step-sees" style="margin-top:0.75rem;">User feels</div>
+          <ul><li>Judged by repetitive data</li><li>Unclear on why patterns repeat</li><li>Overrides limits, disengages</li></ul>
+        </div>
+      </div>
+
+      <div class="interp-callout fade-up" style="margin-top:1.5rem;">
+        <p><strong style="color:var(--taupe);">The Interpretation Gap:</strong> Screen Time is designed to measure behavior, not interpret it.</p>
+        <p>It surfaces activity but does not synthesize recurring patterns, identify triggers, or provide narrative context. Awareness plateaus at measurement â and engagement declines over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" style="background: rgba(201,173,167,0.15); opacity:1;"></div>
+
+  <!-- ââ 03 Research ââ -->
+  <section id="research" class="section-pad">
+    <div class="wrap">
+      <p class="s-label fade-up">03 â Primary Research</p>
+      <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">20 participants. One clear gap.</h2>
+      <div class="research-method fade-up" style="transition-delay:0.1s;">
+        Research Method: Survey + Recall-based walkthrough Â· Goal: Understand how users interpret screen usage data and what triggers overuse moments
+      </div>
+
+      <div class="research-grid fade-up" style="transition-delay:0.12s;">
+        <div class="research-card">
+          <div class="research-card-title">High Usage is Normalized</div>
+          <div class="research-stat">65%</div>
+          <p style="font-size:0.8rem; color:var(--muted);">spend 4â8 hours/day on their phones</p>
+          <ul>
+            <li>20% report 8+ hours daily</li>
+            <li>Issue is not awareness â it's understanding how patterns emerge</li>
+          </ul>
+        </div>
+        <div class="research-card">
+          <div class="research-card-title">Data â  Behavioral Understanding</div>
+          <div class="research-stat">70%</div>
+          <p style="font-size:0.8rem; color:var(--muted);">check screen usage weekly or more</p>
+          <ul>
+            <li>Yet 60% say the data doesn't explain <em>why</em> usage happens</li>
+            <li>Tools report activity â they don't explain behavior</li>
+          </ul>
+        </div>
+        <div class="research-card">
+          <div class="research-card-title">Overuse is Predictable</div>
+          <div class="research-stat">60%</div>
+          <p style="font-size:0.8rem; color:var(--muted);">overuse moment occurs late at night (9PMâ2AM)</p>
+          <ul>
+            <li>Context: resting, finishing work, passive downtime</li>
+            <li>Motivation: relaxation, distraction, habit/reflex</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="insight-bar fade-up">
+        <p>Users already see their screen-time data, but lack tools that <strong>connect usage patterns to behavioral context and triggers.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ââ 04 Problem Breakdown ââ -->
+  <section id="breakdown" class="section-pad">
+    <div class="wrap">
+      <p class="s-label s-label-light fade-up">04 â Problem Breakdown</p>
+      <h2 class="s-h2 s-h2-light fade-up" style="transition-delay:0.05s; margin-bottom:2.5rem;">Translating research<br/>into the product problem</h2>
+
+      <div class="core-insight fade-up" style="transition-delay:0.1s;">
+        <p>Users can see <strong>what</strong> their behavior is, but lack tools to understand <strong>why</strong> it happens â limiting their ability to reflect and change it.</p>
+      </div>
+
+      <div class="breakdown-grid fade-up" style="transition-delay:0.12s;">
+        <div class="breakdown-card">
+          <div class="breakdown-card-title">Missing Behavioral Context</div>
+          <p>Screen-time tools show when usage occurred, but not what led to it. Dashboards show late-night spikes without reasons like post-work fatigue or emotional state.</p>
+        </div>
+        <div class="breakdown-card">
+          <div class="breakdown-card-title">Lack of Pattern Synthesis</div>
+          <p>Usage data is presented as daily metrics and app breakdowns, rather than synthesized patterns. Users are left to infer trends across daily graphs and app usage lists.</p>
+        </div>
+        <div class="breakdown-card">
+          <div class="breakdown-card-title">Cognitive Interpretation Burden</div>
+          <p>Understanding behavior requires manual analysis of multiple charts and metrics. Instead of reducing complexity, dashboards often increase cognitive effort.</p>
+        </div>
+        <div class="breakdown-card">
+          <div class="breakdown-card-title">No Guidance for Reflection</div>
+          <p>Because patterns and triggers are not explained, users are left with awareness but no direction â leading to confusion or disengagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ââ 05 Target Segment ââ -->
+  <section id="segment" class="section-pad">
+    <div class="wrap">
+      <p class="s-label fade-up">05 â Who We're Building For</p>
+      <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">11 PMâ1 AM clusters repeat weekly<br/>but users can't explain why</h2>
+
+      <div class="segment-intro fade-up" style="transition-delay:0.1s; margin-top:1.5rem;">
+        <p>Starting from <strong>30â35M early-career professionals (22â35)</strong> with high digital reliance, we narrow to <strong>12â13M high-frequency users</strong> with repeatable time-bound patterns, focusing finally on a <strong>3â5M high-signal cohort</strong> of recurrent late-night spike users.</p>
+      </div>
+
+      <div class="segment-callout fade-up" style="transition-delay:0.12s;">
+        <p>We begin with a ~4â5M high-signal cohort, where interpretive insights have the highest likelihood of sustained engagement â with expansion to adjacent behavioral clusters over time. Key criteria: highest behavioral signal density, repeatable 11PMâ1AM patterns, already aware of behavior but lacking interpretation, motivated to change but resistant to restriction.</p>
+      </div>
+
+      <p class="s-label" style="margin-bottom:1.25rem;">Jobs to be Done (JTBD)</p>
+      <div class="jtbd-grid fade-up">
+        <div class="jtbd-col">
+          <div class="jtbd-col-title">Functional</div>
+          <ul>
+            <li>Surface recurring late-night patterns automatically</li>
+            <li>Highlight deviation from baseline behavior</li>
+            <li>Synthesize time-based usage clusters</li>
+          </ul>
+        </div>
+        <div class="jtbd-col">
+          <div class="jtbd-col-title">Emotional</div>
+          <ul>
+            <li>Reduce guilt during review moments</li>
+            <li>Replace self-criticism with clarity</li>
+            <li>Feel understood, not evaluated</li>
+          </ul>
+        </div>
+        <div class="jtbd-col">
+          <div class="jtbd-col-title">Cognitive</div>
+          <ul>
+            <li>Lower interpretation burden</li>
+            <li>Convert raw data into narrative insight</li>
+            <li>Avoid overwhelming dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ââ 06 Solutions ââ -->
+  <section id="solutions" class="section-pad">
+    <div class="wrap">
+      <p class="s-label s-label-light fade-up">06 â Solutions Considered</p>
+      <h2 class="s-h2 s-h2-light fade-up" style="transition-delay:0.05s; margin-bottom:3rem;">Three approaches. One winner.</h2>
+
+      <div class="solutions-grid fade-up" style="transition-delay:0.1s;">
+        <div class="solution-card">
+          <div class="solution-title">Session Replay</div>
+          <div class="solution-what-label">What is it?</div>
+          <p>After a session ends, reconstructs the usage loop â apps opened, time spent, switches made â as a visual sequence.</p>
+          <div class="solution-what-label">How it solves the problem</div>
+          <p>Makes the habit loop visible after the fact, but delivers no explanation of what triggered it.</p>
+        </div>
+        <div class="solution-card winner">
+          <div class="solution-badge">â Selected MVP</div>
+          <div class="solution-title">Insight Notifications</div>
+          <div class="solution-what-label">What is it?</div>
+          <p>Mid-session, surfaces a plain-language notification when a recurring pattern is detected: <em>"You've opened Instagram 4 times in the last hour â this tends to happen around this time on weekdays."</em></p>
+          <div clas="solution-what-label">How it solves the problem</div>
+          <p>Delivers behavioral context at the exact moment the pattern is occurring, when the user can connect it to how they feel.</p>
+        </div>
+        <div class="solution-card">
+          <div class="solution-title">Weekly Pattern Digest</div>
+          <div class="solution-what-label">What is it?</div>
+          <p>An end-of-week summary contextualizing behavior over time: <em>"Your late-night usage this week was higher than your 4-week average."</em></p>
+          <div class="solution-what-label">How it solves the problem</div>
+          <p>Surfaces longitudinal patterns but insight arrives days after the behavior â when emotional context is already lost.</p>
+        </div>
+      </div>
+
+      <p class="s-label s-label-light" style="margin-bottom:1.25rem;">Prioritization Matrix</p>
+      <div class="priority-table-wrap fade-up">
+        <table>
+          <thead>
+            <tr>
+              <th>Solution</th>
+              <th>Explains "Why"</th>
+              <th>Impact</th>
+              <th>Friction</th>
+              <th>Complexity</th>
+              <th>Final Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Session Replay</td>
+              <td>1/5</td><td>2/5</td><td>4/5</td><td>5/5</td><td>12/20</td>
+            </tr>
+            <tr class="winner-row">
+              <td>Insights Narrator</td>
+              <td>5/5</td><td>4/5</td><td>3/5</td><td>3/5</td><td class="score-bold">15/20</td>
+            </tr>
+            <tr>
+              <td>Weekly Pattern Digest</td>
+              <td>3/5</td><td>3/5</td><td>4/5</td><td>4/5</td><td>14/20</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ââ 07 How It Works ââ -->
+  <section id="howitworks" class="section-pad">
+    <div class="wrap">
+      <p class="s-label fade-up">07 â The Solution</p>
+      <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">Behavioral context,<br/>delivered in the moment</h2>
+      <p class="s-body fade-up" style="transition-delay:0.1s; max-width:600px; margin-bottom:3rem;">
+        Insight Notifications surfaces a plain-language observation when a recurring pattern is detected â No new app, no new navigation required.
+      </p>
+
+      <p class="s-label" style="margin-bottom:1.25rem;">System Data Flow</p>
+      <div class="flow-nodes fade-up" style="transition-delay:0.1s;">
+        <div class="flow-node"><div class="flow-node-title">User Action</div><p>Opens Instagram at 10:52 PM</p></div>
+        <div class="flow-arrow">â</div>
+        <div class="flow-node"><div class="flow-node-title">Usage Signal Collector</div><p>Time of day, app sequence, session frequency, duration</p></div>
+        <div class="flow-arrow">â</div>
+        <div class="flow-node"><div class="flow-node-title">Content Signal Extractor</div><p>Content category via Share with Apple (short-form video, entertainment)</p></div>
+        <div class="flow-arrow">â</div>
+        <div class="flow-node"><div class="flow-node-title">Pattern Detection Engine</div><p>Matches current session against historical usage clusters</p></div>
+        <div class="flow-arrow">â</div>
+        <div class="flow-node"><div class="flow-node-title">Pattern Memory Store</div><p>User-specific behavioral history (time-bound usage patterns)</p></div>
+        <div class="flow-arrow">â</div>
+        <div class="flow-node"><div class="flow-node-title">Insight Composer</div><p>Converts pattern match into plain-language notification</p></div>
+        <div class="flow-arrow">â</div>
+        <div class="flow-node"><div class="flow-node-title">UI + Feedback Loop</div><p>User taps â Pattern Insight screen â dismisses or acknowledges</p></div>
+      </div>
+
+      <div class="journey-cols fade-up" style="transition-delay:0.14s; margin-top:3rem;">
+        <div>
+          <p class="s-label" style="margin-bottom:1.25rem;">User Journey</p>
+          <div class="user-journey-steps">
+            <div class="journey-numbered"><div class="journey-num">1</div><p>User opens Instagram at 10:52 PM</p></div>
+            <div class="journey-numbered"><div class="journey-num">2</div><p>Pattern threshold met â <strong>4th session in 90 minutes</strong>, predominantly short-form video</p></div>
+            <div class="journey-numbered"><div class="journey-num">3</div><p>iOS notification surfaces: <strong>"You've opened Instagram 4 times in the last 90 minutes. This tends to happen around this time on weekdays."</strong></p></div>
+            <div class="journey[[X\Y]Û\ÜÏHÝ\^K[[HÙ]\Ù\\ÈÝYXØ][Û8¡¤[È[]\[ÚYÚ[ÚYHØÜY[[YOÜÙ]]Û\ÜÏHÝ\^K[[X\Y]Û\ÜÏHÝ\^K[[HOÙ]XYÈZ[[[ÝXYÙHZ][Ü[XZÙÝÛÚ]L[Z[]HXÝ]]HÚ\ÜÙ]]Û\ÜÏHÝ\^K[[X\Y]Û\ÜÏHÝ\^K[[HÙ]\Ù\\ÈÝÛÏY\ËÓÏÜÝÛÏ8 %YYXÚÈY[\È]\]XÝ[Û[ÜX]\ÈH[ÛY[ÙÛÛØÚ[Ý\ÈYXÝ[ÛÜÙ]]Û\ÜÏHÝ\^K[[X\Y]Û\ÜÏHÝ\^K[[HÏÙ]]\ÈÈÙ\ÜÚ[ÛÚ][]Ø\[\ÜÈÙZ\Z][ÜÜÙ]Ù]Ù]]Û\ÜÏH^\[Ú\\ÈÏÙ^HV[Ú\\ÏÚÏ[OÝÛÏÛZYÛY[[[ÝXYÙOÜÝÛÏ8 %ØÙ\][ÛËÝØ\[ÜË]\[ÝIÜHÝ\\Ú[È[ÝYÜ[KÛOOÝÛÏÙÜ\ÜÚ]H\ØÛÜÝ\OÜÝÛÏ8 %ÝYXØ][Û8¡¤]\^[][Û8¡¤\ÝÜXØ[ÛÛ^\Ù\ÛÛÛÈ\ÛOOÝÛÏÜ[Û[[ØYÙ[Y[ÜÝÛÏ8 %\Ù\\È]\ÜÙYÈ[\XÝ]]H\È[Ø^\ÈÛH\]Ø^KÛOOÝÛÏÈ]ÈÝ\XÙOÜÝÛÏ8 %XÙ[[ÚYÚÈÚ]È]][H[ÚYH^\Ý[ÈØÜY[[YK\ÈYÜ[ÛXÝ[ÛÛOÝ[Ù]Ù]Ù]ÜÙXÝ[ÛKKH8¥ 8¥ Y]XÜÈ8¥ 8¥ KOÙXÝ[ÛYHY]XÜÈÛ\ÜÏHÙXÝ[Û\Y]Û\ÜÏHÜ\Û\ÜÏHË[X[Ë[X[[YÚYK]\8 %YX\Ý\[ÈÝXØÙ\ÜÏÜÛ\ÜÏHËZËZ[YÚYK]\Ý[OH[Ú][ÛY[^N
+\ÎÈX\Ú[XÝÛN\[NÈ[\Ý[[ËÝZ[]\ÏÚ]Û\ÜÏHÜ\Ý\YK]\Ý[OH[Ú][ÛY[^N\ÎÈ]Û\ÜÏHÜ\Ý\[X[¸«dÜÝ\Y]XÏÙ]ÏHÙ\Ù\ÈÚÈÜ[H]\[ÚYÚÝYXØ][Û[X\È]\È[[Ú][
+È^\ÈÙ\Ý\ÙOÚÏÝÛÏÚH\ÈY]XÎÜÝÛÏ]YX\Ý\\È[\Ý[[ËÝZ[]\ËH\Ù\ÚÈ[ÈH[ÚYÚXØÝ\]H\ÈH\Ù\ÚÜÙHZ][ÜHÞ\Ý[H\ÈÛÜXÝH[\]Y]\ÈHÛHÝ]ÛÛYH]X]\È8 %ÝÝÈÛÈ^HÜ[XY[È]ÜÙ]]Û\ÜÏHY]XÜËXÛÛÈYK]\Ý[OH[Ú][ÛY[^NLÎÈ]Û\ÜÏHY]XÜËXÛÛ
+Ý\Ü[ÈY]XÜÏÚ
+[OÝÛÏ[ÚYÚÜ[]OÜÝÛÏ8 %	HÙ[ÚYÚÝYXØ][ÛÈ\YËXÙZ]YÛOOÝÛÏYYXÚÈÛÛ\][Û]OÜÝÛÏ8 %	HÙ\Ù\ÈÚÈ\ÜÛY\ÈÜÈÈØ\È\È[ÚYÚ[[ÈÛOOÝÛÏ]\XÝ\[ÙH]OÜÝÛÏ8 %Ù\ÈHØ[YH]\\X\\ÜÈ\]Y[HÝ\ÝXÙ\]Y[ÙYZÜÏÏÛOÝ[Ù]]Û\ÜÏHY]XÜËXÛÛ
+ÛÝ[\Y]XÜÏÚ
+[OÝÛÏÝYXØ][ÛÜ[Ý]Ü]]H]OÜÝÛÏ8 %ÚYÛ[È][ÚYÚÈY[[\Ú]HÜ[XØÝ\]OÛOÝ[Ù]Ù]Ù]ÜÙXÝ[Û]Û\ÜÏH]Y\Ù]KKH8¥ 8¥ H\ÚÜÈ8¥ 8¥ KOÙXÝ[ÛYH\ÚÜÈÛ\ÜÏHÙXÝ[Û\Y]Û\ÜÏHÜ\Û\ÜÏHË[X[YK]\H8 %\ÚÈ[[\Ú\ÏÜÛ\ÜÏHËZYK]\Ý[OH[Ú][ÛY[^N
+\ÎÈX\Ú[XÝÛN\[NÈÚ]\HH\ÚÜÏÏÚ]Û\ÜÏH\ÚËZ[ÈYK]\Ý[OH[Ú][ÛY[^N\ÎÈ]Û\ÜÏH\ÚË[Ý\Y]ÈHXZ[\ÚÈ\ÈÝÛÏ[ÚYÚ]YÝYOÜÝÛÏYÝYXØ][ÛÈY[\]]]HÜ[XØÝ\]K\Ù\È]]H[H[\[H8 %HÜÝXÚYXÝÜHX[XÚXØ[\ÚÈ\ÈÝÛÏ[ÙH]\]X][ÛÜÝÛÏ8 %Ý\XÚ[È[[ÚYÚ]Ù\ÛÝ\ÛÛ]H\Ù\È\Ý\Ý\[È[ÚYÚ][Ü]Û\ÜÏH\ÚËX[[\Ú\ÈÝ[OHX\Ú[]ÜK\[NÈ
+\ÚÈÝ[[X\OÚ
+[O\Ù\ÈX^HY\\ØÚÜÈÝ\YXÝ]H[ÚYÚÏÛOO[XØÝ\]H]\]XÝ[ÛÛÝ[\HÜYX[]OÛOOÝYXØ][Û]YÝYHÛÝ[Ø]\ÙHÜ[Ý]ÈYÜH\Ý\ÈZ[ÛOO]XÞH\Ù\[Û8 %\Ù\ÈX^H\Ý\ÝÚ]ÚYÛ[ÈSÔÈ\È\Ú[ÏÛOÝ[Ù]Ù]]Ù]Ù]]Û\ÜÏH\ÚË]XK]Ü\YK]\Ý[OH[Ú][ÛY[^NLÎÈXOXYØ]YÛÜOÝ\ÚÈ\ØÜ\[ÛÝØX[]OÝ[\XÝÝZ]YØ][ÛÝ]YÞOÝÝÝXYÙOZ][Ü[ÝÝ[OHÛ\Ú^N[NÈ[ÚYÚY[ÈYÛY[[]\[ØÙ\][Û[8 %\Ù\]]\È[[YYX][OÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
+NÈÛZYÛY[[ÛÜHÝZY[[\È[ÜÙY]Þ\Ý[H][È]]H[Ø^\È\ÚXH\È[\ØØ\OÝÝXÚXØ[ÝÝ[OHÛ\Ú^N[NÈ]\]XÝ[ÛZ\Ø]X]\ÈÛÛ^8 %ÜÛÈ\ÜÜÛÈ[YHÛ\Ý\ÝÜ[Û\ÜÏHYÙHYÙK[YYYY][OÜÜ[ÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
+NÈÛÛY[ÙH\ÚÛ8 %ÛHÝ\XÙH[ÚYÚÚ[]\\È\X\YÊÈ[Y\È[Ø[YHÚ[ÝÏÝÝÝ]YÚXÏÝÝ[OHÛ\Ú^N[NÈÝ[HÙX\ÈÙ8 %\Ù\ÈÝÜÜ[[È[ÚYÚÈY\ÙYZÈÝÜ[Û\ÜÏHYÙHYÙK[YYYY][OÜÜ[ÝÜ[Û\ÜÏHYÙHYÙK[YYYY][OÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
+NÈ\H[ÚYÚ\HÝ\[YNÈ[ÙXÙHÙYZÛH]\YÙ\Ý\ÈHÙXÛÛ\HÜX]ÝÝ\ÝÝÝ[OHÛ\Ú^N[NÈ\Ù\ÈÛÝÛÝÈÚ]ÚYÛ[È\HZ[È\ÙY8 %Y[ÈZÙHÝ\Z[[ÙOÝÜ[Û\ÜÏHYÙHYÙK[ÝÈÝÏÜÜ[ÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
+NÈÚH[HHÙYZ[È\ÏÈ[ÈÛ]\HÝYXØ][Û^Z[[È^XÝHÚXÚÚYÛ[ÈYÙÙ\Y]ÝÝÙXÝÝÝ[OHÛ\Ú^N[NÈÝYXØ][Û\]\È]ÜÛÈ[ÛY[8 %\Ù\\È[HYY][ÈÜÚ[ÈÛÛY][È[[[Û[ÝÜ[Û\ÜÏHYÙHYÙK[YYYY][OÜÜ[ÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
+NÈÛX\[]\HÚ[ÝÈ8 %ÛHÝ\XÙH\[È]XÝY\ÜÚ]HÙ\ÜÚ[ÛË]\\[ÈXÝ]H\ÝÚ]Ú[ÏÝÝÝÙOÝXOÙ]Ù]ÜÙXÝ[ÛKKHÛÝ\KOÛÝ\]Û\ÜÏHÛÝ\Z[\HYH[^[Û\ÜÏHÛÝ\XXÚÈÝÈÚYHMZYÚHMY]ÐÞHMM[HÛH]HLLÓ
+H
+H
+HÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKHÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[ÏÜÝÏXÚÈÈÜÛ[ÂØOÜ[Û\ÜÏHÛÝ\XÛÜH]]HÚZÜ]\H0­ÈÜÜ[Ù]ÙÛÝ\ØÜ\ÛÛÝØÈH]È[\ÙXÝ[ÛØÙ\\[Y\ÈO[Y\ËÜXXÚ
+HOÈY
+K\Ò[\ÙXÝ[ÊHK\Ù]Û\ÜÓ\ÝY
+	Ý\ÚXIÊNÈJKÈ\ÚÛHB
+NÂØÝ[Y[]Y\TÙ[XÝÜ[
+	ËYK]\	ÊKÜXXÚ
+[OØËØÙ\J[
+JNÂÜØÜ\ØÙOÚ[
