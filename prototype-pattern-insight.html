@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pattern Insight - Instagram Usage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#353535",
+                        "surface-tint": "#adc6ff",
+                        "on-secondary": "#00390a",
+                        "inverse-surface": "#e2e2e2",
+                        "on-surface": "#e2e2e2",
+                        "outline": "#8b90a0",
+                        "secondary-fixed-dim": "#42e355",
+                        "secondary-container": "#04c339",
+                        "on-primary": "#002e69",
+                        "on-surface-variant": "#c1c6d7",
+                        "on-error": "#690005",
+                        "on-background": "#e2e2e2",
+                        "primary-fixed-dim": "#adc6ff",
+                        "surface": "#000000",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#673d00",
+                        "on-primary-fixed-variant": "#004493",
+                        "tertiary": "#ffb868",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#414755",
+                        "inverse-primary": "#005bc1",
+                        "on-secondary-fixed": "#002204",
+                        "on-primary-container": "#00285c",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-high": "#2c2c2e",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-variant": "#353535",
+                        "inverse-on-surface": "#303030",
+                        "secondary-fixed": "#70ff76",
+                        "surface-container-low": "#1c1c1e",
+                        "surface-bright": "#393939",
+                        "on-secondary-fixed-variant": "#005313",
+                        "tertiary-fixed-dim": "#ffb868",
+                        "on-tertiary-fixed": "#2b1700",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#482900",
+                        "background": "#000000",
+                        "secondary": "#42e355",
+                        "primary": "#007AFF",
+                        "surface-container": "#1c1c1e",
+                        "primary-container": "#007AFF",
+                        "on-secondary-container": "#00480f",
+                        "tertiary-container": "#ce7f00",
+                        "tertiary-fixed": "#ffddbb",
+                        "on-tertiary-container": "#3f2300"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "10px", "2xl": "12px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        .tap-highlight-transparent { -webkit-tap-highlight-color: transparent; }
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-black text-on-surface font-body selection:bg-primary/30">
+<!-- Top Navigation Bar -->
+<header class="bg-black/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex items-center justify-between px-4 h-11 w-full max-w-md mx-auto">
+<button class="active:opacity-70 transition-opacity scale-95 duration-100 flex items-center" onclick="window.location.href='{{DATA:SCREEN:SCREEN_48}}'">
+<span class="material-symbols-outlined text-[#007AFF] text-[24px]">chevron_left</span>
+</button>
+<h1 class="font-['Inter'] font-semibold tracking-tight text-[17px] text-white">Pattern Insight</h1>
+<button class="active:opacity-70 transition-opacity scale-95 duration-100 flex items-center">
+<span class="material-symbols-outlined text-[#007AFF] text-[24px]">more_horiz</span>
+</button>
+</div>
+</header>
+<main class="pt-16 pb-32 px-4 max-w-md mx-auto">
+<!-- App Identity Header -->
+<section class="flex flex-col items-center mb-6 mt-4">
+<img alt="Instagram icon" class="w-20 h-20 rounded-[22%] mb-4 shadow-xl object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhc92o7wgVdiU2zXBIS2vgEQ8Z7JwDcICP6N3NbY3HQl9zw72UOQYkBwnUE_eaCzUmeaCDOjOAQBRfRBBNoZjZX-OsIa1te0jUx4DFcJu5jI3qhLs7hYMUnTD-_WH_hL6_LvKnDyp3_yYqt-w4w6j7Nm-Ru6fYkugpPduvEeIJ-TSgMI4ikMqGCm5RJr7c2aWxZ5ky1wHq7W5IZWoFoY1dmhpCzH9DHtS1t5hyomhTdukGsiKshVFPT4qq8VOEPjvJ2OmCDBCJTwa0"/>
+<h2 class="text-[32px] font-bold tracking-tight text-white mb-0">Instagram Usage</h2>
+<p class="text-[#8E8E93] text-sm font-semibold uppercase tracking-[0.1em] mt-1">FOCUS ANALYSIS</p>
+</section>
+<!-- Focus Analysis Chart Section (Inset Grouped Style) -->
+<section class="mb-6 bg-[#1C1C1E] rounded-xl p-5">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="block text-[11px] font-bold text-[#007AFF] tracking-wider uppercase mb-1">ACTIVITY LEVEL</span>
+<h3 class="text-[36px] font-bold tracking-tight text-white leading-none">High</h3>
+</div>
+<div class="pt-2 flex flex-col items-end max-w-[180px]">
+<span class="text-[#8E8E93] text-[15px] font-medium">Last 90 Minutes</span><p class="text-[#8E8E93] text-[13px] font-medium mt-1 leading-tight text-right">You've opened Instagram 4 times in the last hour — this tends to happen around this time on weekdays.</p>
+</div>
+</div>
+<!-- Bar Chart Visualization -->
+<div class="relative h-44 flex items-end justify-between gap-1.5 mb-2 px-1">
+<!-- Grid lines and labels -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
+<div class="w-full border-t border-white/5 flex justify-end">
+<span class="text-[10px] text-[#8E8E93] -mt-2 mr-[-4px]">8h</span>
+</div>
+<div class="w-full border-t border-dashed border-white/20 flex justify-end">
+<span class="text-[10px] text-[#8E8E93] -mt-2 mr-[-4px]">avg</span>
+</div>
+<div class="w-full border-t border-white/5 flex justify-end">
+<span class="text-[10px] text-[#8E8E93] -mt-2 mr-[-4px]">0</span>
+</div>
+</div>
+<!-- Bars -->
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[20%] transition-all"></div>
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[35%] transition-all"></div>
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[15%] transition-all"></div>
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[40%] transition-all"></div>
+<div class="flex-1 bg-[#007AFF] rounded-sm h-[85%]"></div>
+<div class="flex-1 bg-[#007AFF] rounded-sm h-[100%]"></div>
+<div class="flex-1 bg-[#007AFF] rounded-sm h-[95%]"></div>
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[60%]"></div>
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[30%] transition-all"></div>
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[20%] transition-all"></div>
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[45%] transition-all"></div>
+<div class="flex-1 bg-[#2C2C2E] rounded-sm h-[55%] transition-all"></div>
+</div>
+<div class="flex justify-between text-[11px] font-semibold text-[#8E8E93] uppercase tracking-tighter px-1 mt-3">
+<span>8:30 PM</span>
+<span>9:15 PM</span>
+<span>10:00 PM</span>
+</div>
+</section>
+<!-- Related Trends Grid -->
+<section class="space-y-4 mb-8">
+<h4 class="text-[13px] font-semibold text-[#8E8E93] uppercase tracking-wider px-1">RELATED TRENDS</h4>
+<div class="grid grid-cols-1 gap-3">
+<!-- Weekday Peak Card -->
+<div class="bg-[#1C1C1E] p-4 rounded-xl flex items-center gap-4 active:bg-[#2C2C2E] transition-colors">
+<div class="bg-[#2C2C2E] p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-[#FF9F0A] text-xl" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<div>
+<p class="text-white font-semibold text-[16px]">Weekday Peak</p>
+<p class="text-[#8E8E93] text-[14px] leading-snug">Usage is 42% higher before bedtime compared to mornings.</p>
+</div>
+</div>
+<!-- Quick Switcher Card -->
+<div class="bg-[#1C1C1E] p-4 rounded-xl flex items-center gap-4 active:bg-[#2C2C2E] transition-colors">
+<div class="bg-[#2C2C2E] p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-[#30D158] text-xl" style="font-variation-settings: 'FILL' 1;">swap_horiz</span>
+</div>
+<div>
+<p class="text-white font-semibold text-[16px]">Quick Switcher</p>
+<p class="text-[#8E8E93] text-[14px] leading-snug">Often triggered after opening <span class="text-[#007AFF]">Email</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Feedback Loop Section -->
+<section class="bg-[#1C1C1E] rounded-xl p-6 text-center" id="feedback-card">
+<p class="text-white text-[17px] font-semibold mb-5">Was this insight helpful?</p>
+<div class="flex gap-3 justify-center mb-6">
+<button class="flex-1 bg-[#2C2C2E] hover:bg-[#3A3A3C] active:scale-95 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-200" onclick="this.closest('#feedback-card').innerHTML = '&lt;div class=&quot;flex items-center justify-center min-h-[160px]&quot;&gt;&lt;p class=&quot;text-white text-[20px] font-semibold tracking-tight&quot;&gt;Thanks!&lt;/p&gt;&lt;/div&gt;'">
+                    No
+                </button>
+<button class="flex-1 bg-[#007AFF] hover:bg-[#006EE6] active:scale-95 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-lg shadow-blue-500/10" onclick="this.closest('#feedback-card').innerHTML = '&lt;div class=&quot;flex items-center justify-center min-h-[160px]&quot;&gt;&lt;p class=&quot;text-white text-[20px] font-semibold tracking-tight&quot;&gt;Thanks!&lt;/p&gt;&lt;/div&gt;'">
+                    Yes
+                </button>
+</div>
+<button class="text-[#007AFF] text-[15px] font-medium hover:underline active:opacity-50 transition-all duration-200">
+                Mute insights for Instagram
+            </button>
+</section>
+</main>
+<!-- Navigation Shell -->
+<nav class="bg-black/80 backdrop-blur-xl fixed bottom-0 left-0 w-full flex justify-around items-center pb-safe h-16 border-t border-white/5 z-50">
+<button class="flex flex-col items-center justify-center text-[#007AFF] pt-1 active:scale-90 transition-transform tap-highlight-transparent">
+<span class="material-symbols-outlined text-[26px] fill-[1]">dashboard</span>
+<span class="font-['Inter'] text-[10px] font-bold tracking-tight uppercase mt-0.5">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#8E8E93] pt-1 active:scale-90 transition-transform tap-highlight-transparent">
+<span class="material-symbols-outlined text-[26px]">bar_chart</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight uppercase mt-0.5">Activity</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#8E8E93] pt-1 active:scale-90 transition-transform tap-highlight-transparent">
+<span class="material-symbols-outlined text-[26px]">timer</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight uppercase mt-0.5">App Limits</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#8E8E93] pt-1 active:scale-90 transition-transform tap-highlight-transparent">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-tight uppercase mt-0.5">Allowed</span>
+</button>
+</nav>
+</body></html>
