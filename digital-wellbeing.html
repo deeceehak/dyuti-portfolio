@@ -119,13 +119,13 @@
     .landscape-col-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); margin-bottom: 1.25rem; }
     .landscape-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
     .landscape-col li { font-size: 0.9rem; color: rgba(242,233,228,0.85); padding-left: 1.2rem; position: relative; line-height: 1.5; }
-    .landscape-col li::before { content: '&mdash;'; position: absolute; left: 0; color: var(--taupe); font-weight: 600; }
+    .landscape-col li::before { content: '\2014'; position: absolute; left: 0; color: var(--taupe); font-weight: 600; }
 
     /* Journey flow */
     .journey-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 2rem; }
     .journey-step { background: rgba(34,34,59,0.6); border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; position: relative; }
     .journey-step:not(:last-child)::after {
-      content: '&#x2192;'; position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+      content: '\2192'; position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
       color: var(--taupe); font-size: 1.2rem; z-index: 1;
     }
     .journey-step-title { font-size: 0.78rem; font-weight: 700; color: var(--cream); margin-bottom: 0.75rem; line-height: 1.3; }
@@ -145,7 +145,7 @@
     .research-stat { font-size: 2.2rem; font-weight: 700; color: var(--navy); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.25rem; }
     .research-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .research-card li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.5; }
-    .research-card li::before { content: '&middot;'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .research-card li::before { content: '\00B7'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
     .insight-bar { background: var(--navy); border-radius: 10px; padding: 1.25rem 2rem; text-align: center; }
     .insight-bar p { font-size: 0.9rem; color: var(--cream); font-weight: 500; line-height: 1.6; }
     .insight-bar strong { color: var(--taupe); }
@@ -171,7 +171,7 @@
     .jtbd-col-title { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
     .jtbd-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
     .jtbd-col li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.5; }
-    .jtbd-col li::before { content: '&#x2192;'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 0.1em; }
+    .jtbd-col li::before { content: '\2192'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 0.1em; }
 
     /* ── 06 Solutions ── */
     #solutions { background: var(--slate); }
@@ -209,7 +209,7 @@
     .ux-principles h3 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
     .ux-principles ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
     .ux-principles li { font-size: 0.875rem; color: var(--muted); padding-left: 1.25rem; position: relative; line-height: 1.5; }
-    .ux-principles li::before { content: '&mdash;'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.7rem; }
+    .ux-principles li::before { content: '\2014'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.7rem; }
     .ux-principles strong { color: var(--navy); font-weight: 600; }
 
     .user-journey-steps { display: flex; flex-direction: column; gap: 1rem; }
@@ -229,7 +229,7 @@
     .metrics-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); margin-bottom: 1rem; }
     .metrics-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
     .metrics-col li { font-size: 0.875rem; color: rgba(242,233,228,0.75); padding-left: 1.25rem; position: relative; line-height: 1.6; }
-    .metrics-col li::before { content: '&mdash;'; position: absolute; left: 0; color: var(--taupe); font-weight: 700; font-size: 0.75rem; }
+    .metrics-col li::before { content: '\2014'; position: absolute; left: 0; color: var(--taupe); font-weight: 700; font-size: 0.75rem; }
     .metrics-col li strong { color: var(--cream); font-weight: 600; }
 
     /* ── 09 Risks ── */
@@ -239,7 +239,7 @@
     .risk-analysis h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
     .risk-analysis ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
     .risk-analysis li { font-size: 0.875rem; color: var(--muted); padding-left: 1rem; position: relative; }
-    .risk-analysis li::before { content: '&middot;'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .risk-analysis li::before { content: '\00B7'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
     .risk-table-wrap { background: white; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
     .risk-table-wrap thead th { background: var(--navy); color: var(--taupe); }
     .risk-table-wrap tbody tr { border-top: 1px solid var(--border); }
