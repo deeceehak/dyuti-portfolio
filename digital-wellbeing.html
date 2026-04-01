@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Wellbeing Â· Dyuti Chakravarthy</title>
+  <title>Digital Wellbeing &middot; Dyuti Chakravarthy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
@@ -33,7 +33,7 @@
     body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
 
-    /* ââ Nav ââ */
+    /* ── Nav ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       height: var(--nav-h);
@@ -48,14 +48,14 @@
     .nav-back svg { width: 16px; height: 16px; }
     .nav-tag { font-size: 0.75rem; font-weight: 600; color: var(--accent); background: rgba(74,78,105,0.08); padding: 0.25rem 0.7rem; border-radius: 999px; letter-spacing: 0.04em; }
 
-    /* ââ Wrapper ââ */
+    /* ── Wrapper ── */
     .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
 
-    /* ââ Section labels ââ */
+    /* ── Section labels ── */
     .s-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
     .s-label-light { color: var(--taupe); }
 
-    /* ââ Hero ââ */
+    /* ── Hero ── */
     #hero {
       padding-top: calc(var(--nav-h) + 5rem); padding-bottom: 6rem;
       background: var(--cream); position: relative; overflow: hidden;
@@ -89,20 +89,20 @@
     .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; line-height: 1; }
     .stat-label { font-size: 0.75rem; color: var(--muted); margin-top: 0.3rem; line-height: 1.4; }
 
-    /* ââ Shared section padding ââ */
+    /* ── Shared section padding ── */
     .section-pad { padding: 6rem 0; }
     .section-pad-sm { padding: 4.5rem 0; }
 
-    /* ââ Section headings ââ */
+    /* ── Section headings ── */
     .s-h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
     .s-h2-light { color: var(--cream); }
     .s-body { font-size: 1rem; color: var(--muted); line-height: 1.75; }
     .s-body-light { color: rgba(242,233,228,0.7); }
 
-    /* ââ Divider ââ */
+    /* ── Divider ── */
     .divider { height: 1px; background: var(--border); opacity: 0.5; max-width: var(--max-w); margin: 0 auto; }
 
-    /* ââ 01 Problem section ââ */
+    /* ── 01 Problem section ── */
     #problem { background: var(--cream); }
     .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 3.5rem; }
     .problem-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 2rem; }
@@ -112,20 +112,20 @@
     .why-item { background: var(--surface); border-radius: 10px; padding: 1.25rem 1.5rem; }
     .why-item p { font-size: 0.875rem; color: var(--text); line-height: 1.6; }
 
-    /* ââ 02 Landscape section ââ */
+    /* ── 02 Landscape section ── */
     #landscape { background: var(--slate); }
     .landscape-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3.5rem; }
     .landscape-col { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 2rem; }
     .landscape-col-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); margin-bottom: 1.25rem; }
     .landscape-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
     .landscape-col li { font-size: 0.9rem; color: rgba(242,233,228,0.85); padding-left: 1.2rem; position: relative; line-height: 1.5; }
-    .landscape-col li::before { content: 'â'; position: absolute; left: 0; color: var(--taupe); font-weight: 600; }
+    .landscape-col li::before { content: '&mdash;'; position: absolute; left: 0; color: var(--taupe); font-weight: 600; }
 
     /* Journey flow */
     .journey-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 2rem; }
     .journey-step { background: rgba(34,34,59,0.6); border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; position: relative; }
     .journey-step:not(:last-child)::after {
-      content: 'â'; position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+      content: '&#x2192;'; position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
       color: var(--taupe); font-size: 1.2rem; z-index: 1;
     }
     .journey-step-title { font-size: 0.78rem; font-weight: 700; color: var(--cream); margin-bottom: 0.75rem; line-height: 1.3; }
@@ -136,7 +136,7 @@
     .interp-callout p { font-size: 0.9rem; color: rgba(242,233,228,0.9); line-height: 1.7; }
     .interp-callout p + p { margin-top: 0.6rem; }
 
-    /* ââ 03 Research section ââ */
+    /* ── 03 Research section ── */
     #research { background: var(--cream); }
     .research-method { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(74,78,105,0.08); border: 1px solid rgba(74,78,105,0.15); color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 2.5rem; }
     .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
@@ -145,12 +145,12 @@
     .research-stat { font-size: 2.2rem; font-weight: 700; color: var(--navy); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.25rem; }
     .research-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
     .research-card li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.5; }
-    .research-card li::before { content: 'Â·'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .research-card li::before { content: '&middot;'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
     .insight-bar { background: var(--navy); border-radius: 10px; padding: 1.25rem 2rem; text-align: center; }
     .insight-bar p { font-size: 0.9rem; color: var(--cream); font-weight: 500; line-height: 1.6; }
     .insight-bar strong { color: var(--taupe); }
 
-    /* ââ 04 Problem Breakdown ââ */
+    /* ── 04 Problem Breakdown ── */
     #breakdown { background: var(--navy); }
     .core-insight { background: rgba(201,173,167,0.12); border: 1px solid rgba(201,173,167,0.25); border-radius: 14px; padding: 2rem 2.5rem; margin-bottom: 3rem; text-align: center; }
     .core-insight p { font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.7; }
@@ -160,7 +160,7 @@
     .breakdown-card-title { font-size: 1rem; font-weight: 700; color: var(--cream); margin-bottom: 0.75rem; }
     .breakdown-card p { font-size: 0.875rem; color: rgba(242,233,228,0.7); line-height: 1.65; }
 
-    /* ââ 05 Target Segment ââ */
+    /* ── 05 Target Segment ── */
     #segment { background: var(--cream); }
     .segment-intro { max-width: 680px; margin-bottom: 3rem; }
     .segment-intro p { font-size: 1rem; color: var(--muted); line-height: 1.75; }
@@ -171,9 +171,9 @@
     .jtbd-col-title { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
     .jtbd-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
     .jtbd-col li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.5; }
-    .jtbd-col li::before { content: 'â'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 0.1em; }
+    .jtbd-col li::before { content: '&#x2192;'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 0.1em; }
 
-    /* ââ 06 Solutions ââ */
+    /* ── 06 Solutions ── */
     #solutions { background: var(--slate); }
     .solutions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
     .solution-card { background: rgba(242,233,228,0.08); border: 1px solid rgba(242,233,228,0.15); border-radius: 14px; padding: 1.75rem; position: relative; }
@@ -197,7 +197,7 @@
     tbody td:first-child { text-align: left; color: var(--cream); font-weight: 500; }
     .score-bold { font-weight: 700; color: var(--cream); font-size: 1rem; }
 
-    /* ââ 07 How It Works ââ */
+    /* ── 07 How It Works ── */
     #howitworks { background: var(--cream); }
     .flow-nodes { display: flex; align-items: stretch; gap: 0; margin-bottom: 3rem; overflow-x: auto; }
     .flow-node { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; flex: 1; min-width: 150px; }
@@ -209,7 +209,7 @@
     .ux-principles h3 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
     .ux-principles ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
     .ux-principles li { font-size: 0.875rem; color: var(--muted); padding-left: 1.25rem; position: relative; line-height: 1.5; }
-    .ux-principles li::before { content: 'â'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.7rem; }
+    .ux-principles li::before { content: '&mdash;'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.7rem; }
     .ux-principles strong { color: var(--navy); font-weight: 600; }
 
     .user-journey-steps { display: flex; flex-direction: column; gap: 1rem; }
@@ -218,7 +218,7 @@
     .journey-numbered p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
     .journey-numbered strong { color: var(--navy); }
 
-    /* ââ 08 Metrics ââ */
+    /* ── 08 Metrics ── */
     #metrics { background: var(--navy); }
     .north-star { background: rgba(201,173,167,0.1); border: 1px solid rgba(201,173,167,0.25); border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; }
     .north-star-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); margin-bottom: 0.75rem; }
@@ -229,17 +229,17 @@
     .metrics-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); margin-bottom: 1rem; }
     .metrics-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
     .metrics-col li { font-size: 0.875rem; color: rgba(242,233,228,0.75); padding-left: 1.25rem; position: relative; line-height: 1.6; }
-    .metrics-col li::before { content: 'â'; position: absolute; left: 0; color: var(--taupe); font-weight: 700; font-size: 0.75rem; }
+    .metrics-col li::before { content: '&mdash;'; position: absolute; left: 0; color: var(--taupe); font-weight: 700; font-size: 0.75rem; }
     .metrics-col li strong { color: var(--cream); font-weight: 600; }
 
-    /* ââ 09 Risks ââ */
+    /* ── 09 Risks ── */
     #risks { background: var(--cream); }
     .risk-intro { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; margin-bottom: 3rem; }
     .risk-overview p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 1rem; }
     .risk-analysis h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
     .risk-analysis ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
     .risk-analysis li { font-size: 0.875rem; color: var(--muted); padding-left: 1rem; position: relative; }
-    .risk-analysis li::before { content: 'Â·'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .risk-analysis li::before { content: '&middot;'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
     .risk-table-wrap { background: white; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
     .risk-table-wrap thead th { background: var(--navy); color: var(--taupe); }
     .risk-table-wrap tbody tr { border-top: 1px solid var(--border); }
@@ -251,18 +251,18 @@
     .badge-med { background: rgba(201,173,167,0.2); color: #8a6e65; }
     .badge-low { background: rgba(162,174,157,0.2); color: #5a7a55; }
 
-    /* ââ Footer ââ */
+    /* ── Footer ── */
     footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2rem; }
     .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
     .footer-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); transition: color 0.18s var(--ease); }
     .footer-back:hover { color: var(--navy); }
     .footer-copy { font-size: 0.78rem; color: var(--light); }
 
-    /* ââ Fade in ââ */
+    /* ── Fade in ── */
     .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    /* ââ Responsive ââ */
+    /* ── Responsive ── */
     @media (max-width: 768px) {
       .wrap { padding: 0 1.25rem; }
       .hero-stats, .problem-grid, .landscape-cols, .research-grid, .breakdown-grid,
@@ -288,18 +288,18 @@
     </div>
   </nav>
 
-  <!-- ââ Hero ââ -->
+  <!-- ── Hero ── -->
   <section id="hero">
     <div class="wrap">
       <div class="hero-breadcrumb">Portfolio <span>/ Digital Wellbeing</span></div>
-      <h1 class="hero-h1 fade-up">Why do we scroll â<br/>and never know why?</h1>
+      <h1 class="hero-h1 fade-up">Why do we scroll &mdash;<br/>and never know why?</h1>
       <p class="hero-sub fade-up" style="transition-delay:0.08s;">
-        Redesigning iOS Screen Time to move beyond measurement â delivering behavioral context
+        Redesigning iOS Screen Time to move beyond measurement &mdash; delivering behavioral context
         at the exact moment a pattern is occurring.
       </p>
       <div class="hero-tags fade-up" style="transition-delay:0.14s;">
         <span class="tag">Product Strategy</span>
-        <span class="tag">iOS Â· Screen Time</span>
+        <span class="tag">iOS &middot; Screen Time</span>
         <span class="tag">UX Research</span>
         <span class="tag">Insight Design</span>
         <span class="tag">Behavioral Science</span>
@@ -314,7 +314,7 @@
           <div class="stat-label">Projected market size by 2033</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">3â5M</div>
+          <div class="stat-num">3–5M</div>
           <div class="stat-label">High-signal target cohort (late-night users)</div>
         </div>
       </div>
@@ -323,30 +323,30 @@
 
   <div class="divider"></div>
 
-  <!-- ââ 01 The Problem ââ -->
+  <!-- ── 01 The Problem ── -->
   <section id="problem" class="section-pad">
     <div class="wrap">
-      <p class="s-label fade-up">01 â The Problem</p>
+      <p class="s-label fade-up">01 &mdash; The Problem</p>
       <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">Data without context<br/>creates disengagement</h2>
       <p class="s-body fade-up" style="transition-delay:0.1s; max-width:620px; margin-bottom:3rem;">
-        With smartphones used 4â5+ hours daily on average, OS-native tools have become widespread â but they surface activity without explaining behavior.
+        With smartphones used 4–5+ hours daily on average, OS-native tools have become widespread &mdash; but they surface activity without explaining behavior.
       </p>
 
       <div class="problem-grid fade-up" style="transition-delay:0.12s;">
         <div class="problem-card">
           <div class="problem-card-label">Problem Statement</div>
-          <p>Digital wellbeing tools provide detailed usage metrics but fail to explain the <strong>behavioral triggers, emotional context, and recurring patterns</strong> behind screen habits â leading to disengagement over time.</p>
+          <p>Digital wellbeing tools provide detailed usage metrics but fail to explain the <strong>behavioral triggers, emotional context, and recurring patterns</strong> behind screen habits &mdash; leading to disengagement over time.</p>
         </div>
         <div class="problem-card">
           <div class="problem-card-label">Product Goal</div>
-          <p>Enable users to understand their recurring digital behavior patterns through <strong>reflective, non-judgmental insights</strong> â without restricting or prescribing usage.</p>
+          <p>Enable users to understand their recurring digital behavior patterns through <strong>reflective, non-judgmental insights</strong> &mdash; without restricting or prescribing usage.</p>
         </div>
       </div>
 
       <p class="s-label" style="margin-bottom:1rem;">Why does this problem matter?</p>
       <div class="why-grid fade-up">
         <div class="why-item"><p>Users disengage when dashboards don't translate data into meaning.</p></div>
-        <div class="why-item"><p>Without understanding triggers, habits repeat â awareness alone changes nothing.</p></div>
+        <div class="why-item"><p>Without understanding triggers, habits repeat &mdash; awareness alone changes nothing.</p></div>
         <div class="why-item"><p>Evaluative insights trigger guilt instead of clarity, accelerating churn.</p></div>
       </div>
     </div>
@@ -354,10 +354,10 @@
 
   <div class="divider"></div>
 
-  <!-- ââ 02 Current Landscape ââ -->
+  <!-- ── 02 Current Landscape ── -->
   <section id="landscape" class="section-pad">
     <div class="wrap">
-      <p class="s-label s-label-light fade-up">02 â Current Landscape</p>
+      <p class="s-label s-label-light fade-up">02 &mdash; Current Landscape</p>
       <h2 class="s-h2 s-h2-light fade-up" style="transition-delay:0.05s;">iOS Screen Time measures behavior<br/>but never interprets it</h2>
       <p class="s-body s-body-light fade-up" style="transition-delay:0.1s; max-width:580px; margin-bottom:3rem;">
         The app surfaces activity but does not synthesize recurring patterns, identify triggers, or provide narrative context.
@@ -377,7 +377,7 @@
         <div class="landscape-col">
           <div class="landscape-col-title">Where today's OS tools fail</div>
           <ul>
-            <li>Context is missing â usage data shown without triggers or situational signals</li>
+            <li>Context is missing &mdash; usage data shown without triggers or situational signals</li>
             <li>Dashboards are descriptive but not explanatory, lacking the 'why' of behavior</li>
             <li>Over-indexed on quantification which increases cognitive load</li>
             <li>Retrospective reporting when emotional context is already lost</li>
@@ -419,45 +419,45 @@
 
       <div class="interp-callout fade-up" style="margin-top:1.5rem;">
         <p><strong style="color:var(--taupe);">The Interpretation Gap:</strong> Screen Time is designed to measure behavior, not interpret it.</p>
-        <p>It surfaces activity but does not synthesize recurring patterns, identify triggers, or provide narrative context. Awareness plateaus at measurement â and engagement declines over time.</p>
+        <p>It surfaces activity but does not synthesize recurring patterns, identify triggers, or provide narrative context. Awareness plateaus at measurement &mdash; and engagement declines over time.</p>
       </div>
     </div>
   </section>
 
   <div class="divider" style="background: rgba(201,173,167,0.15); opacity:1;"></div>
 
-  <!-- ââ 03 Research ââ -->
+  <!-- ── 03 Research ── -->
   <section id="research" class="section-pad">
     <div class="wrap">
-      <p class="s-label fade-up">03 â Primary Research</p>
+      <p class="s-label fade-up">03 &mdash; Primary Research</p>
       <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">20 participants. One clear gap.</h2>
       <div class="research-method fade-up" style="transition-delay:0.1s;">
-        Research Method: Survey + Recall-based walkthrough Â· Goal: Understand how users interpret screen usage data and what triggers overuse moments
+        Research Method: Survey + Recall-based walkthrough &middot; Goal: Understand how users interpret screen usage data and what triggers overuse moments
       </div>
 
       <div class="research-grid fade-up" style="transition-delay:0.12s;">
         <div class="research-card">
           <div class="research-card-title">High Usage is Normalized</div>
           <div class="research-stat">65%</div>
-          <p style="font-size:0.8rem; color:var(--muted);">spend 4â8 hours/day on their phones</p>
+          <p style="font-size:0.8rem; color:var(--muted);">spend 4–8 hours/day on their phones</p>
           <ul>
             <li>20% report 8+ hours daily</li>
-            <li>Issue is not awareness â it's understanding how patterns emerge</li>
+            <li>Issue is not awareness &mdash; it's understanding how patterns emerge</li>
           </ul>
         </div>
         <div class="research-card">
-          <div class="research-card-title">Data â  Behavioral Understanding</div>
+          <div class="research-card-title">Data ≠ Behavioral Understanding</div>
           <div class="research-stat">70%</div>
           <p style="font-size:0.8rem; color:var(--muted);">check screen usage weekly or more</p>
           <ul>
             <li>Yet 60% say the data doesn't explain <em>why</em> usage happens</li>
-            <li>Tools report activity â they don't explain behavior</li>
+            <li>Tools report activity &mdash; they don't explain behavior</li>
           </ul>
         </div>
         <div class="research-card">
           <div class="research-card-title">Overuse is Predictable</div>
           <div class="research-stat">60%</div>
-          <p style="font-size:0.8rem; color:var(--muted);">overuse moment occurs late at night (9PMâ2AM)</p>
+          <p style="font-size:0.8rem; color:var(--muted);">overuse moment occurs late at night (9PM–2AM)</p>
           <ul>
             <li>Context: resting, finishing work, passive downtime</li>
             <li>Motivation: relaxation, distraction, habit/reflex</li>
@@ -471,14 +471,14 @@
     </div>
   </section>
 
-  <!-- ââ 04 Problem Breakdown ââ -->
+  <!-- ── 04 Problem Breakdown ── -->
   <section id="breakdown" class="section-pad">
     <div class="wrap">
-      <p class="s-label s-label-light fade-up">04 â Problem Breakdown</p>
+      <p class="s-label s-label-light fade-up">04 &mdash; Problem Breakdown</p>
       <h2 class="s-h2 s-h2-light fade-up" style="transition-delay:0.05s; margin-bottom:2.5rem;">Translating research<br/>into the product problem</h2>
 
       <div class="core-insight fade-up" style="transition-delay:0.1s;">
-        <p>Users can see <strong>what</strong> their behavior is, but lack tools to understand <strong>why</strong> it happens â limiting their ability to reflect and change it.</p>
+        <p>Users can see <strong>what</strong> their behavior is, but lack tools to understand <strong>why</strong> it happens &mdash; limiting their ability to reflect and change it.</p>
       </div>
 
       <div class="breakdown-grid fade-up" style="transition-delay:0.12s;">
@@ -496,7 +496,7 @@
         </div>
         <div class="breakdown-card">
           <div class="breakdown-card-title">No Guidance for Reflection</div>
-          <p>Because patterns and triggers are not explained, users are left with awareness but no direction â leading to confusion or disengagement.</p>
+          <p>Because patterns and triggers are not explained, users are left with awareness but no direction &mdash; leading to confusion or disengagement.</p>
         </div>
       </div>
     </div>
@@ -504,18 +504,18 @@
 
   <div class="divider"></div>
 
-  <!-- ââ 05 Target Segment ââ -->
+  <!-- ── 05 Target Segment ── -->
   <section id="segment" class="section-pad">
     <div class="wrap">
-      <p class="s-label fade-up">05 â Who We're Building For</p>
-      <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">11 PMâ1 AM clusters repeat weekly<br/>but users can't explain why</h2>
+      <p class="s-label fade-up">05 &mdash; Who We're Building For</p>
+      <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">11 PM–1 AM clusters repeat weekly<br/>but users can't explain why</h2>
 
       <div class="segment-intro fade-up" style="transition-delay:0.1s; margin-top:1.5rem;">
-        <p>Starting from <strong>30â35M early-career professionals (22â35)</strong> with high digital reliance, we narrow to <strong>12â13M high-frequency users</strong> with repeatable time-bound patterns, focusing finally on a <strong>3â5M high-signal cohort</strong> of recurrent late-night spike users.</p>
+        <p>Starting from <strong>30–35M early-career professionals (22–35)</strong> with high digital reliance, we narrow to <strong>12–13M high-frequency users</strong> with repeatable time-bound patterns, focusing finally on a <strong>3–5M high-signal cohort</strong> of recurrent late-night spike users.</p>
       </div>
 
       <div class="segment-callout fade-up" style="transition-delay:0.12s;">
-        <p>We begin with a ~4â5M high-signal cohort, where interpretive insights have the highest likelihood of sustained engagement â with expansion to adjacent behavioral clusters over time. Key criteria: highest behavioral signal density, repeatable 11PMâ1AM patterns, already aware of behavior but lacking interpretation, motivated to change but resistant to restriction.</p>
+        <p>We begin with a ~4–5M high-signal cohort, where interpretive insights have the highest likelihood of sustained engagement &mdash; with expansion to adjacent behavioral clusters over time. Key criteria: highest behavioral signal density, repeatable 11PM–1AM patterns, already aware of behavior but lacking interpretation, motivated to change but resistant to restriction.</p>
       </div>
 
       <p class="s-label" style="margin-bottom:1.25rem;">Jobs to be Done (JTBD)</p>
@@ -550,26 +550,26 @@
 
   <div class="divider"></div>
 
-  <!-- ââ 06 Solutions ââ -->
+  <!-- ── 06 Solutions ── -->
   <section id="solutions" class="section-pad">
     <div class="wrap">
-      <p class="s-label s-label-light fade-up">06 â Solutions Considered</p>
+      <p class="s-label s-label-light fade-up">06 &mdash; Solutions Considered</p>
       <h2 class="s-h2 s-h2-light fade-up" style="transition-delay:0.05s; margin-bottom:3rem;">Three approaches. One winner.</h2>
 
       <div class="solutions-grid fade-up" style="transition-delay:0.1s;">
         <div class="solution-card">
           <div class="solution-title">Session Replay</div>
           <div class="solution-what-label">What is it?</div>
-          <p>After a session ends, reconstructs the usage loop â apps opened, time spent, switches made â as a visual sequence.</p>
+          <p>After a session ends, reconstructs the usage loop &mdash; apps opened, time spent, switches made &mdash; as a visual sequence.</p>
           <div class="solution-what-label">How it solves the problem</div>
           <p>Makes the habit loop visible after the fact, but delivers no explanation of what triggered it.</p>
         </div>
         <div class="solution-card winner">
-          <div class="solution-badge">â Selected MVP</div>
+          <div class="solution-badge">✓ Selected MVP</div>
           <div class="solution-title">Insight Notifications</div>
           <div class="solution-what-label">What is it?</div>
-          <p>Mid-session, surfaces a plain-language notification when a recurring pattern is detected: <em>"You've opened Instagram 4 times in the last hour â this tends to happen around this time on weekdays."</em></p>
-          <div clas="solution-what-label">How it solves the problem</div>
+          <p>Mid-session, surfaces a plain-language notification when a recurring pattern is detected: <em>"You've opened Instagram 4 times in the last hour &mdash; this tends to happen around this time on weekdays."</em></p>
+          <div class="solution-what-label">How it solves the problem</div>
           <p>Delivers behavioral context at the exact moment the pattern is occurring, when the user can connect it to how they feel.</p>
         </div>
         <div class="solution-card">
@@ -577,7 +577,7 @@
           <div class="solution-what-label">What is it?</div>
           <p>An end-of-week summary contextualizing behavior over time: <em>"Your late-night usage this week was higher than your 4-week average."</em></p>
           <div class="solution-what-label">How it solves the problem</div>
-          <p>Surfaces longitudinal patterns but insight arrives days after the behavior â when emotional context is already lost.</p>
+          <p>Surfaces longitudinal patterns but insight arrives days after the behavior &mdash; when emotional context is already lost.</p>
         </div>
       </div>
 
@@ -615,30 +615,30 @@
 
   <div class="divider"></div>
 
-  <!-- ââ 07 How It Works ââ -->
+  <!-- ── 07 How It Works ── -->
   <section id="howitworks" class="section-pad">
     <div class="wrap">
-      <p class="s-label fade-up">07 â The Solution</p>
+      <p class="s-label fade-up">07 &mdash; The Solution</p>
       <h2 class="s-h2 fade-up" style="transition-delay:0.05s;">Behavioral context,<br/>delivered in the moment</h2>
       <p class="s-body fade-up" style="transition-delay:0.1s; max-width:600px; margin-bottom:3rem;">
-        Insight Notifications surfaces a plain-language observation when a recurring pattern is detected â No new app, no new navigation required.
+        Insight Notifications surfaces a plain-language observation when a recurring pattern is detected &mdash; no new app, no new navigation required.
       </p>
 
       <p class="s-label" style="margin-bottom:1.25rem;">System Data Flow</p>
       <div class="flow-nodes fade-up" style="transition-delay:0.1s;">
         <div class="flow-node"><div class="flow-node-title">User Action</div><p>Opens Instagram at 10:52 PM</p></div>
-        <div class="flow-arrow">â</div>
+        <div class="flow-arrow">&#x2192;</div>
         <div class="flow-node"><div class="flow-node-title">Usage Signal Collector</div><p>Time of day, app sequence, session frequency, duration</p></div>
-        <div class="flow-arrow">â</div>
+        <div class="flow-arrow">&#x2192;</div>
         <div class="flow-node"><div class="flow-node-title">Content Signal Extractor</div><p>Content category via Share with Apple (short-form video, entertainment)</p></div>
-        <div class="flow-arrow">â</div>
+        <div class="flow-arrow">↓</div>
         <div class="flow-node"><div class="flow-node-title">Pattern Detection Engine</div><p>Matches current session against historical usage clusters</p></div>
-        <div class="flow-arrow">â</div>
+        <div class="flow-arrow">&#x2190;</div>
         <div class="flow-node"><div class="flow-node-title">Pattern Memory Store</div><p>User-specific behavioral history (time-bound usage patterns)</p></div>
-        <div class="flow-arrow">â</div>
+        <div class="flow-arrow">&#x2190;</div>
         <div class="flow-node"><div class="flow-node-title">Insight Composer</div><p>Converts pattern match into plain-language notification</p></div>
-        <div class="flow-arrow">â</div>
-        <div class="flow-node"><div class="flow-node-title">UI + Feedback Loop</div><p>User taps â Pattern Insight screen â dismisses or acknowledges</p></div>
+        <div class="flow-arrow">&#x2192;</div>
+        <div class="flow-node"><div class="flow-node-title">UI + Feedback Loop</div><p>User taps &#x2192; Pattern Insight screen &#x2192; dismisses or acknowledges</p></div>
       </div>
 
       <div class="journey-cols fade-up" style="transition-delay:0.14s; margin-top:3rem;">
@@ -646,30 +646,160 @@
           <p class="s-label" style="margin-bottom:1.25rem;">User Journey</p>
           <div class="user-journey-steps">
             <div class="journey-numbered"><div class="journey-num">1</div><p>User opens Instagram at 10:52 PM</p></div>
-            <div class="journey-numbered"><div class="journey-num">2</div><p>Pattern threshold met â <strong>4th session in 90 minutes</strong>, predominantly short-form video</p></div>
+            <div class="journey-numbered"><div class="journey-num">2</div><p>Pattern threshold met &mdash; <strong>4th session in 90 minutes</strong>, predominantly short-form video</p></div>
             <div class="journey-numbered"><div class="journey-num">3</div><p>iOS notification surfaces: <strong>"You've opened Instagram 4 times in the last 90 minutes. This tends to happen around this time on weekdays."</strong></p></div>
-            <div class="journey[[X\Y]Û\ÜÏHÝ\^K[[HÙ]\Ù\\ÈÝYXØ][Û8¡¤[È[]\[ÚYÚ[ÚYHØÜY[[YOÜÙ]]Û\ÜÏHÝ\^K[[X\Y]Û\ÜÏHÝ\^K[[HOÙ]XYÈZ[[[ÝXYÙHZ][Ü[XZÙÝÛÚ]L[Z[]HXÝ]]HÚ\ÜÙ]]Û\ÜÏHÝ\^K[[X\Y]Û\ÜÏHÝ\^K[[HÙ]\Ù\\ÈÝÛÏY\ËÓÏÜÝÛÏ8 %YYXÚÈY[\È]\]XÝ[Û[ÜX]\ÈH[ÛY[ÙÛÛØÚ[Ý\ÈYXÝ[ÛÜÙ]]Û\ÜÏHÝ\^K[[X\Y]Û\ÜÏHÝ\^K[[HÏÙ]]\ÈÈÙ\ÜÚ[ÛÚ][]Ø\[\ÜÈÙZ\Z][ÜÜÙ]Ù]Ù]]Û\ÜÏH^\[Ú\\ÈÏÙ^HV[Ú\\ÏÚÏ[OÝÛÏÛZYÛY[[[ÝXYÙOÜÝÛÏ8 %ØÙ\][ÛËÝØ\[ÜË]\[ÝIÜHÝ\\Ú[È[ÝYÜ[KÛOOÝÛÏÙÜ\ÜÚ]H\ØÛÜÝ\OÜÝÛÏ8 %ÝYXØ][Û8¡¤]\^[][Û8¡¤\ÝÜXØ[ÛÛ^\Ù\ÛÛÛÈ\ÛOOÝÛÏÜ[Û[[ØYÙ[Y[ÜÝÛÏ8 %\Ù\\È]\ÜÙYÈ[\XÝ]]H\È[Ø^\ÈÛH\]Ø^KÛOOÝÛÏÈ]ÈÝ\XÙOÜÝÛÏ8 %XÙ[[ÚYÚÈÚ]È]][H[ÚYH^\Ý[ÈØÜY[[YK\ÈYÜ[ÛXÝ[ÛÛOÝ[Ù]Ù]Ù]ÜÙXÝ[ÛKKH8¥ 8¥ Y]XÜÈ8¥ 8¥ KOÙXÝ[ÛYHY]XÜÈÛ\ÜÏHÙXÝ[Û\Y]Û\ÜÏHÜ\Û\ÜÏHË[X[Ë[X[[YÚYK]\8 %YX\Ý\[ÈÝXØÙ\ÜÏÜÛ\ÜÏHËZËZ[YÚYK]\Ý[OH[Ú][ÛY[^N
-\ÎÈX\Ú[XÝÛN\[NÈ[\Ý[[ËÝZ[]\ÏÚ]Û\ÜÏHÜ\Ý\YK]\Ý[OH[Ú][ÛY[^N\ÎÈ]Û\ÜÏHÜ\Ý\[X[¸«dÜÝ\Y]XÏÙ]ÏHÙ\Ù\ÈÚÈÜ[H]\[ÚYÚÝYXØ][Û[X\È]\È[[Ú][
-È^\ÈÙ\Ý\ÙOÚÏÝÛÏÚH\ÈY]XÎÜÝÛÏ]YX\Ý\\È[\Ý[[ËÝZ[]\ËH\Ù\ÚÈ[ÈH[ÚYÚXØÝ\]H\ÈH\Ù\ÚÜÙHZ][ÜHÞ\Ý[H\ÈÛÜXÝH[\]Y]\ÈHÛHÝ]ÛÛYH]X]\È8 %ÝÝÈÛÈ^HÜ[XY[È]ÜÙ]]Û\ÜÏHY]XÜËXÛÛÈYK]\Ý[OH[Ú][ÛY[^NLÎÈ]Û\ÜÏHY]XÜËXÛÛ
-Ý\Ü[ÈY]XÜÏÚ
-[OÝÛÏ[ÚYÚÜ[]OÜÝÛÏ8 %	HÙ[ÚYÚÝYXØ][ÛÈ\YËXÙZ]YÛOOÝÛÏYYXÚÈÛÛ\][Û]OÜÝÛÏ8 %	HÙ\Ù\ÈÚÈ\ÜÛY\ÈÜÈÈØ\È\È[ÚYÚ[[ÈÛOOÝÛÏ]\XÝ\[ÙH]OÜÝÛÏ8 %Ù\ÈHØ[YH]\\X\\ÜÈ\]Y[HÝ\ÝXÙ\]Y[ÙYZÜÏÏÛOÝ[Ù]]Û\ÜÏHY]XÜËXÛÛ
-ÛÝ[\Y]XÜÏÚ
-[OÝÛÏÝYXØ][ÛÜ[Ý]Ü]]H]OÜÝÛÏ8 %ÚYÛ[È][ÚYÚÈY[[\Ú]HÜ[XØÝ\]OÛOÝ[Ù]Ù]Ù]ÜÙXÝ[Û]Û\ÜÏH]Y\Ù]KKH8¥ 8¥ H\ÚÜÈ8¥ 8¥ KOÙXÝ[ÛYH\ÚÜÈÛ\ÜÏHÙXÝ[Û\Y]Û\ÜÏHÜ\Û\ÜÏHË[X[YK]\H8 %\ÚÈ[[\Ú\ÏÜÛ\ÜÏHËZYK]\Ý[OH[Ú][ÛY[^N
-\ÎÈX\Ú[XÝÛN\[NÈÚ]\HH\ÚÜÏÏÚ]Û\ÜÏH\ÚËZ[ÈYK]\Ý[OH[Ú][ÛY[^N\ÎÈ]Û\ÜÏH\ÚË[Ý\Y]ÈHXZ[\ÚÈ\ÈÝÛÏ[ÚYÚ]YÝYOÜÝÛÏYÝYXØ][ÛÈY[\]]]HÜ[XØÝ\]K\Ù\È]]H[H[\[H8 %HÜÝXÚYXÝÜHX[XÚXØ[\ÚÈ\ÈÝÛÏ[ÙH]\]X][ÛÜÝÛÏ8 %Ý\XÚ[È[[ÚYÚ]Ù\ÛÝ\ÛÛ]H\Ù\È\Ý\Ý\[È[ÚYÚ][Ü]Û\ÜÏH\ÚËX[[\Ú\ÈÝ[OHX\Ú[]ÜK\[NÈ
-\ÚÈÝ[[X\OÚ
-[O\Ù\ÈX^HY\\ØÚÜÈÝ\YXÝ]H[ÚYÚÏÛOO[XØÝ\]H]\]XÝ[ÛÛÝ[\HÜYX[]OÛOOÝYXØ][Û]YÝYHÛÝ[Ø]\ÙHÜ[Ý]ÈYÜH\Ý\ÈZ[ÛOO]XÞH\Ù\[Û8 %\Ù\ÈX^H\Ý\ÝÚ]ÚYÛ[ÈSÔÈ\È\Ú[ÏÛOÝ[Ù]Ù]]Ù]Ù]]Û\ÜÏH\ÚË]XK]Ü\YK]\Ý[OH[Ú][ÛY[^NLÎÈXOXYØ]YÛÜOÝ\ÚÈ\ØÜ\[ÛÝØX[]OÝ[\XÝÝZ]YØ][ÛÝ]YÞOÝÝÝXYÙOZ][Ü[ÝÝ[OHÛ\Ú^N[NÈ[ÚYÚY[ÈYÛY[[]\[ØÙ\][Û[8 %\Ù\]]\È[[YYX][OÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
-NÈÛZYÛY[[ÛÜHÝZY[[\È[ÜÙY]Þ\Ý[H][È]]H[Ø^\È\ÚXH\È[\ØØ\OÝÝXÚXØ[ÝÝ[OHÛ\Ú^N[NÈ]\]XÝ[ÛZ\Ø]X]\ÈÛÛ^8 %ÜÛÈ\ÜÜÛÈ[YHÛ\Ý\ÝÜ[Û\ÜÏHYÙHYÙK[YYYY][OÜÜ[ÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
-NÈÛÛY[ÙH\ÚÛ8 %ÛHÝ\XÙH[ÚYÚÚ[]\\È\X\YÊÈ[Y\È[Ø[YHÚ[ÝÏÝÝÝ]YÚXÏÝÝ[OHÛ\Ú^N[NÈÝ[HÙX\ÈÙ8 %\Ù\ÈÝÜÜ[[È[ÚYÚÈY\ÙYZÈÝÜ[Û\ÜÏHYÙHYÙK[YYYY][OÜÜ[ÝÜ[Û\ÜÏHYÙHYÙK[YYYY][OÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
-NÈ\H[ÚYÚ\HÝ\[YNÈ[ÙXÙHÙYZÛH]\YÙ\Ý\ÈHÙXÛÛ\HÜX]ÝÝ\ÝÝÝ[OHÛ\Ú^N[NÈ\Ù\ÈÛÝÛÝÈÚ]ÚYÛ[È\HZ[È\ÙY8 %Y[ÈZÙHÝ\Z[[ÙOÝÜ[Û\ÜÏHYÙHYÙK[ÝÈÝÏÜÜ[ÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
-NÈÚH[HHÙYZ[È\ÏÈ[ÈÛ]\HÝYXØ][Û^Z[[È^XÝHÚXÚÚYÛ[ÈYÙÙ\Y]ÝÝÙXÝÝÝ[OHÛ\Ú^N[NÈÝYXØ][Û\]\È]ÜÛÈ[ÛY[8 %\Ù\\È[HYY][ÈÜÚ[ÈÛÛY][È[[[Û[ÝÜ[Û\ÜÏHYÙHYÙK[YYYY][OÜÜ[ÝÜ[Û\ÜÏHYÙHYÙKZYÚYÚÜÜ[ÝÝ[OHÛ\Ú^N[NÈÛÛÜ\K[]]Y
-NÈÛX\[]\HÚ[ÝÈ8 %ÛHÝ\XÙH\[È]XÝY\ÜÚ]HÙ\ÜÚ[ÛË]\\[ÈXÝ]H\ÝÚ]Ú[ÏÝÝÝÙOÝXOÙ]Ù]ÜÙXÝ[ÛKKHÛÝ\KOÛÝ\]Û\ÜÏHÛÝ\Z[\HYH[^[Û\ÜÏHÛÝ\XXÚÈÝÈÚYHMZYÚHMY]ÐÞHMM[HÛH]HLLÓ
-H
-H
-HÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKHÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[ÏÜÝÏXÚÈÈÜÛ[ÂØOÜ[Û\ÜÏHÛÝ\XÛÜH]]HÚZÜ]\H0­ÈÜÜ[Ù]ÙÛÝ\ØÜ\ÛÛÝØÈH]È[\ÙXÝ[ÛØÙ\\[Y\ÈO[Y\ËÜXXÚ
-HOÈY
-K\Ò[\ÙXÝ[ÊHK\Ù]Û\ÜÓ\ÝY
-	Ý\ÚXIÊNÈJKÈ\ÚÛHB
-NÂØÝ[Y[]Y\TÙ[XÝÜ[
-	ËYK]\	ÊKÜXXÚ
-[OØËØÙ\J[
-JNÂÜØÜ\ØÙOÚ[
+            <div class="journey-numbered"><div class="journey-num">4</div><p>User taps notification &#x2192; lands in Pattern Insight inside Screen Time</p></div>
+            <div class="journey-numbered"><div class="journey-num">5</div><p>Reads plain-language behavioral breakdown with 90-minute activity chart</p></div>
+            <div class="journey-numbered"><div class="journey-num">6</div><p>User taps <strong>Yes/No</strong> &mdash; feedback refines pattern detection and creates a moment of conscious reflection</p></div>
+            <div class="journey-numbered"><div class="journey-num">7</div><p>Returns to session with full awareness of their behavior</p></div>
+          </div>
+        </div>
+        <div class="ux-principles">
+          <h3>Key UX Principles</h3>
+          <ul>
+            <li><strong>Non-judgmental language</strong> &mdash; observations, not warnings. Never "You're overusing Instagram."</li>
+            <li><strong>Progressive disclosure</strong> &mdash; notification &#x2192; pattern explanation &#x2192; historical context. User controls depth.</li>
+            <li><strong>Optional engagement</strong> &mdash; user is never forced to interact. Mute is always one tap away.</li>
+            <li><strong>No new surface</strong> &mdash; Recent Insights sits natively inside existing Screen Time. Zero adoption friction.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 08 Metrics ── -->
+  <section id="metrics" class="section-pad">
+    <div class="wrap">
+      <p class="s-label s-label-light fade-up">08 &mdash; Measuring Success</p>
+      <h2 class="s-h2 s-h2-light fade-up" style="transition-delay:0.05s; margin-bottom:2.5rem;">Understanding, not minutes</h2>
+
+      <div class="north-star fade-up" style="transition-delay:0.1s;">
+        <div class="north-star-label">⭐ North Star Metric</div>
+        <h3>% of users who open a Pattern Insight notification and mark it as helpful within 7 days of first use</h3>
+        <p><strong>Why this metric:</strong> It measures understanding, not minutes. A user who finds the insight accurate is a user whose behavior the system has correctly interpreted. That is the only outcome that matters &mdash; not how long they spent reading it.</p>
+      </div>
+
+      <div class="metrics-cols fade-up" style="transition-delay:0.12s;">
+        <div class="metrics-col">
+          <h4>Supporting Metrics</h4>
+          <ul>
+            <li><strong>Insight Open Rate</strong> &mdash; % of Insight Notifications tapped vs. received</li>
+            <li><strong>Feedback Completion Rate</strong> &mdash; % of users who respond Yes or No to "Was this insight helpful?"</li>
+            <li><strong>Pattern Recurrence Rate</strong> &mdash; Does the same pattern appear less frequently over subsequent weeks?</li>
+          </ul>
+        </div>
+        <div class="metrics-col">
+          <h4>Counter Metrics</h4>
+          <ul>
+            <li><strong>Notification opt-out or mute rate</strong> &mdash; signals that insights feel intrusive or inaccurate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── 09 Risks ── -->
+  <section id="risks" class="section-pad">
+    <div class="wrap">
+      <p class="s-label fade-up">09 &mdash; Risk Analysis</p>
+      <h2 class="s-h2 fade-up" style="transition-delay:0.05s; margin-bottom:2.5rem;">What are the risks?</h2>
+
+      <div class="risk-intro fade-up" style="transition-delay:0.1s;">
+        <div class="risk-overview">
+          <p>The main risk is <strong>Insight Fatigue</strong>. If notifications feel repetitive or inaccurate, users mute them entirely &mdash; the Ostrich Effect.</p>
+          <p>The real technical risk is <strong>false pattern attribution</strong> &mdash; surfacing an insight that doesn't resonate erodes trust faster than no insight at all.</p>
+          <div class="risk-analysis" style="margin-top:1.5rem;">
+            <h4>Risk Summary</h4>
+            <ul>
+              <li>Users may prefer hard blocks over reflective insights</li>
+              <li>Inaccurate pattern detection could harm credibility</li>
+              <li>Notification fatigue could cause opt-outs before trust is built</li>
+              <li>Privacy perception &mdash; users may distrust what signals iOS is using</li>
+            </ul>
+          </div>
+        </div>
+        <div></div>
+      </div>
+
+      <div class="risk-table-wrap fade-up" style="transition-delay:0.12s;">
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Risk Description</th>
+              <th>Probability</th>
+              <th>Impact</th>
+              <th>Mitigation Strategy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Behavioral</td>
+              <td style="font-size:0.82rem;">Insight feels judgmental rather than observational &mdash; user mutes immediately</td>
+              <td><span class="badge badge-high">High</span></td>
+              <td><span class="badge badge-high">High</span></td>
+              <td style="font-size:0.82rem; color:var(--muted);">Non-judgmental copy guidelines enforced at system level; "Mute" always visible as an escape</td>
+            </tr>
+            <tr>
+              <td>Technical</td>
+              <td style="font-size:0.82rem;">Pattern detection misattributes context &mdash; wrong app or Wrong time cluster</td>
+              <td><span class="badge badge-med">Medium</span></td>
+              <td><span class="badge badge-high">High</span></td>
+              <td style="font-size:0.82rem; color:var(--muted);">Confidence threshold &mdash; only surface insight when pattern has appeared 3+ times in same window</td>
+            </tr>
+            <tr>
+              <td>Strategic</td>
+              <td style="font-size:0.82rem;">Novelty wears off &mdash; users stop opening insights after week 2</td>
+              <td><span class="badge badge-med">Medium</span></td>
+              <td><span class="badge badge-med">Medium</span></td>
+              <td style="font-size:0.82rem; color:var(--muted);">Vary insight type over time; introduce Weekly Pattern Digest as a secondary format</td>
+            </tr>
+            <tr>
+              <td>Trust</td>
+              <td style="font-size:0.82rem;">Users don't know what signals are being used &mdash; feels like surveillance</td>
+              <td><span class="badge badge-low">Low</span></td>
+              <td><span class="badge badge-high">High</span></td>
+              <td style="font-size:0.82rem; color:var(--muted);">"Why am I seeing this?" link on every notification explaining exactly which signals triggered it</td>
+            </tr>
+            <tr>
+              <td>Product</td>
+              <td style="font-size:0.82rem;">Notification arrives at wrong moment &mdash; user is in a meeting or doing something intentional</td>
+              <td><span class="badge badge-med">Medium</span></td>
+              <td><span class="badge badge-high">High</span></td>
+              <td style="font-size:0.82rem; color:var(--muted);">Smart delivery window &mdash; only surface during detected passive sessions, never during active app switching</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="footer-back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to Portfolio
+      </a>
+      <span class="footer-copy">Dyuti Chakravarthy &middot; 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
+    );
+    document.querySelectorAll('.fade-up').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      } else {
+        obs.observe(el);
+      }
+    });
+  </script>
+</body>
+</html>
